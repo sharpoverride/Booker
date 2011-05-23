@@ -14,7 +14,6 @@ using Core.Security;
 namespace Web.Controllers
 {
 	[HandleError]
-	[Requires(FunctionRights=FunctionRights.Employee)]
 	public class HomeController : Controller
 	{
 		[Dependency]
