@@ -1,0 +1,567 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FxCopProject Version="10.0" Name="Booker">
+ <ProjectOptions>
+  <SharedProject>True</SharedProject>
+  <Stylesheet Apply="False">$(FxCopDir)\Xml\FxCopReport.xsl</Stylesheet>
+  <SaveMessages>
+   <Project Status="Active, Excluded" NewOnly="False" />
+   <Report Status="Active" NewOnly="False" />
+  </SaveMessages>
+  <ProjectFile Compress="True" DefaultTargetCheck="True" DefaultRuleCheck="True" SaveByRuleGroup="" Deterministic="True" />
+  <EnableMultithreadedLoad>True</EnableMultithreadedLoad>
+  <EnableMultithreadedAnalysis>True</EnableMultithreadedAnalysis>
+  <SourceLookup>True</SourceLookup>
+  <AnalysisExceptionsThreshold>10</AnalysisExceptionsThreshold>
+  <RuleExceptionsThreshold>1</RuleExceptionsThreshold>
+  <Spelling Locale="en-US" />
+  <OverrideRuleVisibilities>False</OverrideRuleVisibilities>
+  <CustomDictionaries SearchFxCopDir="True" SearchUserProfile="True" SearchProjectDir="True" />
+  <SearchGlobalAssemblyCache>False</SearchGlobalAssemblyCache>
+  <DeadlockDetectionTimeout>120</DeadlockDetectionTimeout>
+  <IgnoreGeneratedCode>False</IgnoreGeneratedCode>
+ </ProjectOptions>
+ <Targets>
+  <Target Name="$(ProjectDir)/../Web/bin/Core.dll" Analyze="True" AnalyzeAllChildren="True" />
+  <Target Name="$(ProjectDir)/../Web/bin/Domain.dll" Analyze="False" AnalyzeAllChildren="True" />
+  <Target Name="$(ProjectDir)/../Web/bin/Persistence.dll" Analyze="False" AnalyzeAllChildren="True" />
+  <Target Name="$(ProjectDir)/../Web/bin/Web.dll" Analyze="False" AnalyzeAllChildren="False" />
+ </Targets>
+ <Rules>
+  <RuleFiles>
+   <RuleFile Name="$(FxCopDir)\Rules\DesignRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\GlobalizationRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\InteroperabilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\MobilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\NamingRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\PerformanceRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\PortabilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\SecurityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\SecurityTransparencyRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\UsageRules.dll" Enabled="True" AllRulesEnabled="True" />
+  </RuleFiles>
+  <Groups />
+  <Settings />
+ </Rules>
+ <FxCopReport Version="10.0">
+  <Namespaces>
+   <Namespace Name="Core.Domain">
+    <Messages>
+     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Created="2011-05-06 08:28:12Z">
+      <Issue>
+       <Item>Core.Domain</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="Core.Security">
+    <Messages>
+     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Created="2011-05-06 08:28:12Z">
+      <Issue>
+       <Item>Core.Security</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+  </Namespaces>
+  <Targets>
+   <Target Name="$(ProjectDir)/../Web/bin/Core.dll">
+    <Modules>
+     <Module Name="core.dll">
+      <Messages>
+       <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Created="2011-05-06 08:28:12Z">
+        <Issue Name="NoStrongName">
+         <Item>'Core.dll'</Item>
+        </Issue>
+       </Message>
+       <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Created="2011-05-06 08:28:12Z">
+        <Issue>
+         <Item>'Core.dll'</Item>
+        </Issue>
+       </Message>
+      </Messages>
+      <Namespaces>
+       <Namespace Name="Core.Domain">
+        <Types>
+         <Type Name="DomainEntity">
+          <Members>
+           <Member Name="#Id">
+            <Accessors>
+             <Accessor Name="#set_Id(System.Guid)">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2011-05-06 08:28:12Z">
+                <Issue>
+                 <Item>'DomainEntity.Id.set(Guid)'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="Function">
+          <Messages>
+           <Message Id="Function" TypeName="IdentifiersShouldNotMatchKeywords" Category="Microsoft.Naming" CheckId="CA1716" Created="2011-05-06 08:28:12Z">
+            <Issue Name="Type">
+             <Item>'Function'</Item>
+             <Item>Function</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#.ctor()">
+            <Messages>
+             <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Created="2011-05-06 08:28:12Z">
+              <Issue>
+               <Item>'Function.Function()'</Item>
+               <Item>&#xD;&#xA;&#xD;&#xA;Function..ctor()&#xD;&#xA;Function.set_Roles(IList&lt;Role&gt;):Void</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Roles">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Created="2011-05-06 08:28:12Z">
+              <Issue>
+               <Item>'Function.Roles'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="Role">
+          <Members>
+           <Member Name="#.ctor()">
+            <Messages>
+             <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Created="2011-05-06 08:28:12Z">
+              <Issue>
+               <Item>'Role.Role()'</Item>
+               <Item>&#xD;&#xA;&#xD;&#xA;Role..ctor()&#xD;&#xA;Role.set_Employees(IList&lt;User&gt;):Void</Item>
+              </Issue>
+              <Issue>
+               <Item>'Role.Role()'</Item>
+               <Item>&#xD;&#xA;&#xD;&#xA;Role..ctor()&#xD;&#xA;Role.set_Functions(IList&lt;Function&gt;):Void</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#AddFunction(Core.Domain.Function)">
+            <Messages>
+             <Message Id="Function" TypeName="IdentifiersShouldNotMatchKeywords" Category="Microsoft.Naming" CheckId="CA1716" Created="2011-05-06 08:28:12Z">
+              <Issue Name="MemberParameter">
+               <Item>'Role.AddFunction(Function)'</Item>
+               <Item>'function'</Item>
+               <Item>Function</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Employees">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Created="2011-05-06 08:28:12Z">
+              <Issue>
+               <Item>'Role.Employees'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Functions">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Created="2011-05-06 08:28:12Z">
+              <Issue>
+               <Item>'Role.Functions'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#RemoveFunction(Core.Domain.Function)">
+            <Messages>
+             <Message Id="Function" TypeName="IdentifiersShouldNotMatchKeywords" Category="Microsoft.Naming" CheckId="CA1716" Created="2011-05-06 08:28:12Z">
+              <Issue Name="MemberParameter">
+               <Item>'Role.RemoveFunction(Function)'</Item>
+               <Item>'function'</Item>
+               <Item>Function</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="User">
+          <Members>
+           <Member Name="#.ctor()">
+            <Messages>
+             <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Created="2011-05-06 08:28:12Z">
+              <Issue>
+               <Item>'User.User()'</Item>
+               <Item>&#xD;&#xA;&#xD;&#xA;User..ctor()&#xD;&#xA;User.set_Roles(IList&lt;Role&gt;):Void</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Roles">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Created="2011-05-06 08:28:12Z">
+              <Issue>
+               <Item>'User.Roles'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="Core.Persistence">
+        <Types>
+         <Type Name="IDeleteCommand`1">
+          <Messages>
+           <Message Id="ENTITY" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2011-05-06 08:28:12Z" FixCategory="NonBreaking">
+            <Issue Name="TypeTypeParameter">
+             <Item>'IDeleteCommand&lt;ENTITY&gt;'</Item>
+             <Item>ENTITY</Item>
+             <Item>'ENTITY'</Item>
+             <Item>Entity</Item>
+            </Issue>
+           </Message>
+           <Message Id="T" TypeName="IdentifiersShouldHaveCorrectPrefix" Category="Microsoft.Naming" CheckId="CA1715" Created="2011-05-06 08:28:12Z" FixCategory="NonBreaking">
+            <Issue Name="TypeTypeParameter">
+             <Item>'IDeleteCommand&lt;ENTITY&gt;'</Item>
+             <Item>'ENTITY'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="IDomainCommand`1">
+          <Messages>
+           <Message Id="ENTITY" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2011-05-06 08:28:12Z" FixCategory="NonBreaking">
+            <Issue Name="TypeTypeParameter">
+             <Item>'IDomainCommand&lt;ENTITY&gt;'</Item>
+             <Item>ENTITY</Item>
+             <Item>'ENTITY'</Item>
+             <Item>Entity</Item>
+            </Issue>
+           </Message>
+           <Message Id="T" TypeName="IdentifiersShouldHaveCorrectPrefix" Category="Microsoft.Naming" CheckId="CA1715" Created="2011-05-06 08:28:12Z" FixCategory="NonBreaking">
+            <Issue Name="TypeTypeParameter">
+             <Item>'IDomainCommand&lt;ENTITY&gt;'</Item>
+             <Item>'ENTITY'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="IDomainQuery`1">
+          <Messages>
+           <Message Id="ENTITY" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2011-05-06 08:28:12Z" FixCategory="NonBreaking">
+            <Issue Name="TypeTypeParameter">
+             <Item>'IDomainQuery&lt;ENTITY&gt;'</Item>
+             <Item>ENTITY</Item>
+             <Item>'ENTITY'</Item>
+             <Item>Entity</Item>
+            </Issue>
+           </Message>
+           <Message Id="T" TypeName="IdentifiersShouldHaveCorrectPrefix" Category="Microsoft.Naming" CheckId="CA1715" Created="2011-05-06 08:28:12Z" FixCategory="NonBreaking">
+            <Issue Name="TypeTypeParameter">
+             <Item>'IDomainQuery&lt;ENTITY&gt;'</Item>
+             <Item>'ENTITY'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#Expression">
+            <Messages>
+             <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Created="2011-05-06 08:28:12Z">
+              <Issue>
+               <Item>'IDomainQuery&lt;ENTITY&gt;.Expression'</Item>
+               <Item>'Expression&lt;Func&lt;ENTITY, bool&gt;&gt;'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="IQueryService`1">
+          <Messages>
+           <Message Id="ENTITY" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2011-05-06 08:28:12Z" FixCategory="NonBreaking">
+            <Issue Name="TypeTypeParameter">
+             <Item>'IQueryService&lt;ENTITY&gt;'</Item>
+             <Item>ENTITY</Item>
+             <Item>'ENTITY'</Item>
+             <Item>Entity</Item>
+            </Issue>
+           </Message>
+           <Message Id="T" TypeName="IdentifiersShouldHaveCorrectPrefix" Category="Microsoft.Naming" CheckId="CA1715" Created="2011-05-06 08:28:12Z" FixCategory="NonBreaking">
+            <Issue Name="TypeTypeParameter">
+             <Item>'IQueryService&lt;ENTITY&gt;'</Item>
+             <Item>'ENTITY'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="ISaveOrUpdateCommand`1">
+          <Messages>
+           <Message Id="ENTITY" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2011-05-06 08:28:12Z" FixCategory="NonBreaking">
+            <Issue Name="TypeTypeParameter">
+             <Item>'ISaveOrUpdateCommand&lt;ENTITY&gt;'</Item>
+             <Item>ENTITY</Item>
+             <Item>'ENTITY'</Item>
+             <Item>Entity</Item>
+            </Issue>
+           </Message>
+           <Message Id="T" TypeName="IdentifiersShouldHaveCorrectPrefix" Category="Microsoft.Naming" CheckId="CA1715" Created="2011-05-06 08:28:12Z" FixCategory="NonBreaking">
+            <Issue Name="TypeTypeParameter">
+             <Item>'ISaveOrUpdateCommand&lt;ENTITY&gt;'</Item>
+             <Item>'ENTITY'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="Core.Security">
+        <Types>
+         <Type Name="FunctionRights">
+          <Messages>
+           <Message TypeName="StaticHolderTypesShouldNotHaveConstructors" Category="Microsoft.Design" CheckId="CA1053" Created="2011-05-06 08:28:12Z">
+            <Issue>
+             <Item>'FunctionRights'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="IFunctionRightsService">
+          <Members>
+           <Member Name="#HasFunctionAssigned(System.String)">
+            <Messages>
+             <Message Id="Function" TypeName="IdentifiersShouldNotMatchKeywords" Category="Microsoft.Naming" CheckId="CA1716" Created="2011-05-06 08:28:12Z">
+              <Issue Name="MemberParameter">
+               <Item>'IFunctionRightsService.HasFunctionAssigned(string)'</Item>
+               <Item>'function'</Item>
+               <Item>Function</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="Core.Services">
+        <Types>
+         <Type Name="ICssScriptCompressionService">
+          <Messages>
+           <Message TypeName="AvoidEmptyInterfaces" Category="Microsoft.Design" CheckId="CA1040" Created="2011-05-06 08:28:12Z">
+            <Issue>
+             <Item>'ICssScriptCompressionService'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="IJavaScriptCompressionService">
+          <Messages>
+           <Message TypeName="AvoidEmptyInterfaces" Category="Microsoft.Design" CheckId="CA1040" Created="2011-05-06 08:28:12Z">
+            <Issue>
+             <Item>'IJavaScriptCompressionService'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="LdapMembershipService">
+          <Members>
+           <Member Name="#ValidateUser(System.String,System.String)">
+            <Messages>
+             <Message Id="System.String.Format(System.String,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2011-05-06 08:28:12Z">
+              <Issue Name="IFormatProviderAlternateString">
+               <Item>'string.Format(string, object)'</Item>
+               <Item>'LdapMembershipService.ValidateUser(string, string)'</Item>
+               <Item>'string.Format(IFormatProvider, string, params object[])'</Item>
+               <Item>'CultureInfo.CurrentCulture'</Item>
+               <Item>'CultureInfo.InvariantCulture'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="MimeTypeResolverService">
+          <Members>
+           <Member Name="#GetMIMEType(System.String)">
+            <Messages>
+             <Message Id="MIME" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2011-05-06 08:28:12Z">
+              <Issue Name="Member">
+               <Item>MIME</Item>
+               <Item>'MimeTypeResolverService.GetMIMEType(string)'</Item>
+               <Item>Mime</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2011-05-06 08:28:12Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'MimeTypeResolverService.GetMIMEType(string)'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="NormalizeStringsToUppercase" Category="Microsoft.Globalization" CheckId="CA1308" Created="2011-05-06 08:28:12Z">
+              <Issue Name="ToUpperInvariant">
+               <Item>'MimeTypeResolverService.GetMIMEType(string)'</Item>
+               <Item>'string.ToLowerInvariant()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#TryGetMIMETypeFromRegistry(System.String,System.String&amp;)">
+            <Messages>
+             <Message Id="MIME" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2011-05-06 08:28:12Z">
+              <Issue Name="Member">
+               <Item>MIME</Item>
+               <Item>'MimeTypeResolverService.TryGetMIMETypeFromRegistry(string, out string)'</Item>
+               <Item>Mime</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2011-05-06 08:28:12Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'MimeTypeResolverService.TryGetMIMETypeFromRegistry(string, out string)'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="NormalizeStringsToUppercase" Category="Microsoft.Globalization" CheckId="CA1308" Created="2011-05-06 08:28:12Z">
+              <Issue Name="ToUpperInvariant">
+               <Item>'MimeTypeResolverService.TryGetMIMETypeFromRegistry(string, out string)'</Item>
+               <Item>'string.ToLowerInvariant()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="Core.Services.Configuration">
+        <Types>
+         <Type Name="NamedConfigurationElementCollection`1">
+          <Members>
+           <Member Name="#.ctor(System.String,System.String)">
+            <Messages>
+             <Message TypeName="TestForEmptyStringsUsingStringLength" Category="Microsoft.Performance" CheckId="CA1820" Created="2011-05-06 08:28:12Z">
+              <Issue Name="IsNullOrEmpty">
+               <Item>'string.operator ==(string, string)'</Item>
+               <Item>'NamedConfigurationElementCollection&lt;TElementType&gt;.NamedConfigurationElementCollection(string, string)'</Item>
+              </Issue>
+              <Issue Name="IsNullOrEmpty">
+               <Item>'string.operator ==(string, string)'</Item>
+               <Item>'NamedConfigurationElementCollection&lt;TElementType&gt;.NamedConfigurationElementCollection(string, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ArgumentNotNull(System.Object,System.String)">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2011-05-06 08:28:12Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'NamedConfigurationElementCollection&lt;TElementType&gt;.ArgumentNotNull(object, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="Core.Services.Implementations">
+        <Types>
+         <Type Name="CachedCssProviderSerive">
+          <Messages>
+           <Message Id="Serive" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2011-05-06 08:28:12Z">
+            <Issue Name="Type">
+             <Item>Serive</Item>
+             <Item>'CachedCssProviderSerive'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="MicrosoftMinifierCssCompresionService">
+          <Messages>
+           <Message Id="Compresion" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2011-05-06 08:28:12Z">
+            <Issue Name="Type">
+             <Item>Compresion</Item>
+             <Item>'MicrosoftMinifierCssCompresionService'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="MicrosoftMinifierJavascriptCompressionService">
+          <Messages>
+           <Message Id="Javascript" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Created="2011-05-06 08:28:12Z">
+            <Issue Name="TypeShouldBeCompoundWord">
+             <Item>Javascript</Item>
+             <Item>'MicrosoftMinifierJavascriptCompressionService'</Item>
+             <Item>JavaScript</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+        </Types>
+       </Namespace>
+      </Namespaces>
+     </Module>
+    </Modules>
+   </Target>
+  </Targets>
+  <Rules>
+   <Rule TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210">
+    <Resolution Name="NoStrongName">Sign {0} with a strong name key.</Resolution>
+   </Rule>
+   <Rule TypeName="AvoidEmptyInterfaces" Category="Microsoft.Design" CheckId="CA1040">
+    <Resolution Name="Default">Define a custom attribute to replace {0}.</Resolution>
+   </Rule>
+   <Rule TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020">
+    <Resolution Name="Default">Consider merging the types defined in '{0}' with another namespace.</Resolution>
+   </Rule>
+   <Rule TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811">
+    <Resolution Name="Default">{0} appears to have no upstream public or protected callers.</Resolution>
+   </Rule>
+   <Rule TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227">
+    <Resolution Name="Default">Change {0} to be read-only by removing the property setter.</Resolution>
+   </Rule>
+   <Rule TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702">
+    <Resolution Name="TypeShouldBeCompoundWord">The discrete term '{0}' in type name {1} should be expressed as a compound word, '{2}'.</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214">
+    <Resolution Name="Default">{0} contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: {1}</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006">
+    <Resolution Name="Default">Consider a design where {0} doesn't nest generic type {1}.</Resolution>
+   </Rule>
+   <Rule TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709">
+    <Resolution Name="Member">Correct the casing of '{0}' in member name {1} by changing it to '{2}'.</Resolution>
+    <Resolution Name="TypeTypeParameter">On type {0}, correct the casing of '{1}' in generic type parameter name {2} by changing it to '{3}'.</Resolution>
+   </Rule>
+   <Rule TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704">
+    <Resolution Name="Type">Correct the spelling of '{0}' in type name {1}.</Resolution>
+   </Rule>
+   <Rule TypeName="IdentifiersShouldHaveCorrectPrefix" Category="Microsoft.Naming" CheckId="CA1715">
+    <Resolution Name="TypeTypeParameter">On type {0}, prefix generic type parameter name {1} with 'T'.</Resolution>
+   </Rule>
+   <Rule TypeName="IdentifiersShouldNotMatchKeywords" Category="Microsoft.Naming" CheckId="CA1716">
+    <Resolution Name="MemberParameter">In virtual/interface member {0}, rename parameter {1} so that it no longer conflicts with the reserved language keyword '{2}'. Using a reserved keyword as the name of a parameter on a virtual/interface member makes it harder for consumers in other languages to override/implement the member.</Resolution>
+    <Resolution Name="Type">Rename type {0} so that it no longer conflicts with the reserved language keyword '{1}'. Using a reserved keyword as the name of a type makes it harder for consumers in other languages to use the type.</Resolution>
+   </Rule>
+   <Rule TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014">
+    <Resolution Name="Default">Mark {0} with CLSCompliant(true) because it exposes externally visible types.</Resolution>
+   </Rule>
+   <Rule TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822">
+    <Resolution Name="Default">The 'this' parameter (or 'Me' in Visual Basic) of {0} is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Resolution>
+   </Rule>
+   <Rule TypeName="NormalizeStringsToUppercase" Category="Microsoft.Globalization" CheckId="CA1308">
+    <Resolution Name="ToUpperInvariant">In method {0}, replace the call to {1} with String.ToUpperInvariant().</Resolution>
+   </Rule>
+   <Rule TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305">
+    <Resolution Name="IFormatProviderAlternateString">Because the behavior of {0} could vary based on the current user's locale settings, replace this call in {1} with a call to {2}. If the result of {2} will be displayed to the user, specify {3} as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify {4}.</Resolution>
+   </Rule>
+   <Rule TypeName="StaticHolderTypesShouldNotHaveConstructors" Category="Microsoft.Design" CheckId="CA1053">
+    <Resolution Name="Default">Because type {0} contains only 'static' ('Shared' in Visual Basic) members, add a default private constructor to prevent the compiler from adding a default public constructor.</Resolution>
+   </Rule>
+   <Rule TypeName="TestForEmptyStringsUsingStringLength" Category="Microsoft.Performance" CheckId="CA1820">
+    <Resolution Name="IsNullOrEmpty">Replace the call to {0} in {1} with a call to 'String.IsNullOrEmpty'.</Resolution>
+   </Rule>
+  </Rules>
+ </FxCopReport>
+</FxCopProject>

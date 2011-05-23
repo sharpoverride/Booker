@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>@ViewBag.Title</title>
+	<link href="@(Html.BuildUrlFromExpression<CssController>(req => req.Index("site")))"
+        rel="stylesheet" type="text/css" media="screen,projection" />
+	<!--[if IE 7]>
+    <link href="@(Html.BuildUrlFromExpression<CssController>(req => req.Index("ie")))"
+        rel="stylesheet" type="text/css" media="screen, projection" />
+    <![endif]-->
+	<!--[if IE 6]>
+    <link href="@(Html.BuildUrlFromExpression<CssController>(req => req.Index("ie6")))"
+        rel="stylesheet" type="text/css" media="screen, projection" />
+    <![endif]-->
+	<script src="@(Html.BuildUrlFromExpression<JavascriptController>(req => req.Index("frameworks")))"
+        language="javascript" type="text/javascript"> </script>
+	<script src="@(Html.BuildUrlFromExpression<JavascriptController>(req => req.Index("site")))"
+        language="javascript" type="text/javascript"> </script>
+</head>
+<body>
+	<div class="container_16">
+	@if (ViewBag.ShowHeader == null || ViewBag.ShowHeader)
+ { 
+	 <div class="prefix_11 grid_5 current_user">
+		@{Html.RenderPartial("_LogOnPartial");}
+	 </div>
+		<header>
+            <div id="title" class="grid_16">
+                <h1>Booker</h1>
+            </div>
+           	<div class="clear"></div>
+			      
+								        <nav>
+                <ul id="menu" class="nav">
+                    <li>@Html.ActionLink("Bookmarks", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                </ul>
+            </nav>
+	    </header>
+ }
+		<section id="main" class="grid_16">
+            @RenderBody()
+			        </section>
+		<footer class="grid_16">
+
+		
+        </footer>
+		<div class="clear">
+		</div>
+	</div>
+	@RenderSection("scripts", false)
+</body>
+</html>

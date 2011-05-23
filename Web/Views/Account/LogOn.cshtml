@@ -1,0 +1,43 @@
+﻿@model Web.Models.Account.LogOnModel
+@{
+	ViewBag.Title = "Log On";
+	ViewBag.ShowHeader = false;
+}
+@using (Html.BeginForm())
+{
+	<div class="grid_5">
+		&nbsp;</div>
+	<div class="login  grid_6 ">
+		<h1>
+			Provide your credentials</h1>
+		<hr />
+		@Html.ValidationSummary(true, "Login was unsuccessful. Please correct the errors and try again.")
+		<h3>
+			User name</h3>
+		<div class="editor-field">
+			@Html.TextBoxFor(m => m.UserName)
+			@Html.ValidationMessageFor(m => m.UserName)
+		</div>
+		<h3>
+			Password
+		</h3>
+		<div class="editor-field">
+			@Html.PasswordFor(m => m.Password)
+			@Html.ValidationMessageFor(m => m.Password)
+		</div>
+		<div class="space">
+			&nbsp;</div>
+		<div class="editor-label">
+			@Html.CheckBoxFor(m => m.RememberMe)
+			Remember your credentials on this computer
+		</div>
+		<div class="space">
+			&nbsp;</div>
+		<div>
+			<input class="sexybutton sexysimple sexygreen" type="submit" value="Sign in" />
+		</div>
+	</div>
+	
+	<div class="grid_5">
+		&nbsp;</div>
+}

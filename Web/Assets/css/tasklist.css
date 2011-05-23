@@ -1,0 +1,70 @@
+﻿.tasklist
+{
+   border-bottom: thin dashed #eee;
+   padding:0;
+}
+
+
+
+.tasklist .title
+{
+    font-family: 'Lucida Grande', Sans-Serif;
+    font-size: 2.1em;
+    display:block;
+    padding:.4em 0em .3em .2em;
+    line-height: 1em;
+
+}
+
+.tasklist .continue
+{
+    text-align:center;
+}
+
+.task
+{
+    display:block;
+    margin: 0em 0em 0.2em 0em;
+    padding-left: 1.2em;
+    border-bottom: thick solid #eee;
+    height:2em;
+    position:relative;
+    
+}
+
+.task:hover
+{
+    background-color: #eee;
+}
+
+.task .task_controls
+{
+    display:none;
+    left:-30px;
+    padding: 6px 4px 0px 4px;
+    position:absolute;
+    height:2em;
+    background-color: #fff;
+    border-radius: .5em;
+    -moz-border-radius: .5em;
+    -webkit-border-radius: .5em;
+   
+    
+}
+.task .task_controls img
+{
+    cursor:pointer;
+}
+.task:hover .task_controls
+{
+
+display:inline-block;
+}
+
+.task .task_description
+{
+   font-size:1.3em;
+   display:inline-block;
+   padding-top:0.5em;
+    
+}

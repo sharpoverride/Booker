@@ -1,0 +1,58 @@
+﻿@model Web.Models.Home.IndexModel
+@{
+	ViewBag.Title = "Home Page";
+}
+<div class="grid_12">
+	<table class="searchable">
+		<thead>
+			<tr>
+				<th>
+					#
+				</th>
+				<th>
+					URI
+				</th>
+				<th>
+					Notes
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			@{
+				var item = 0;
+			}
+			@foreach (var bookmark in Model.Bookmarks)
+   {
+	   var _class = (item % 2 == 0) ? "odd" : "even";
+	   
+				<tr class="@_class">
+					<td>@(Html.ActionLink<HomeController>(c => c.EditBookmark(bookmark.Id), "Edit"))
+					</td>
+					<td>@bookmark.Url
+					</td>
+					<td>@bookmark.Notes
+					</td>
+				</tr> 
+   }
+		</tbody>
+	</table>
+</div>
+<div class="grid_4">
+	<h3>
+		Actions</h3>
+	<div class="page_header_buttons">
+		<a href="@(Html.BuildUrlFromExpression<HomeController>(it => it.AddBookmark()))">
+			<button type="button" class="sexybutton sexysimple sexygreen">
+				Create new</button></a>
+	</div>
+</div>
+@section scripts{
+	<script type="text/javascript">
+		$(function () {
+			$(".searchable").dataTable({
+				"sPaginationType": "full_numbers"
+			});
+		});
+
+	</script>
+}

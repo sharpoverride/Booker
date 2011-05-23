@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="C:\Users\mihailazar\documents\visual studio 2010\Projects\Experiments\AppHarbor\Booker\Tests\bin\Debug\Tests.dll" total="6" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2011-04-28" time="15:05:58">
+  <environment nunit-version="2.5.5.10112" clr-version="4.0.30319.225" os-version="Microsoft Windows NT 6.1.7600.0" platform="Win32NT" cwd="C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE" machine-name="EVOL075" user="mihailazar" user-domain="EVOL075" />
+  <culture-info current-culture="en-US" current-uiculture="en-US" />
+  <test-suite type="Assembly" name="C:\Users\mihailazar\documents\visual studio 2010\Projects\Experiments\AppHarbor\Booker\Tests\bin\Debug\Tests.dll" executed="True" result="Success" success="True" time="1.244" asserts="0">
+    <results>
+      <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="1.237" asserts="0">
+        <results>
+          <test-suite type="Namespace" name="Unit" executed="True" result="Success" success="True" time="1.235" asserts="0">
+            <results>
+              <test-suite type="Namespace" name="Controllers" executed="True" result="Success" success="True" time="1.233" asserts="0">
+                <results>
+                  <test-suite type="TestFixture" name="HomeControllerTests" executed="True" result="Success" success="True" time="1.231" asserts="0">
+                    <results>
+                      <test-case name="Tests.Unit.Controllers.HomeControllerTests.AddBookmark_Should_Retrieve_View" executed="True" result="Success" success="True" time="0.055" asserts="2" />
+                      <test-case name="Tests.Unit.Controllers.HomeControllerTests.AddBookmark_WithInput_Saves_Data" executed="True" result="Success" success="True" time="0.986" asserts="3" />
+                      <test-case name="Tests.Unit.Controllers.HomeControllerTests.EditBookmark_Should_RetrieveView" executed="True" result="Success" success="True" time="0.029" asserts="1" />
+                      <test-case name="Tests.Unit.Controllers.HomeControllerTests.EditBookmark_WithInput_SavesData" executed="True" result="Success" success="True" time="0.041" asserts="0" />
+                      <test-case name="Tests.Unit.Controllers.HomeControllerTests.Index_Returns_BookmarkLists" executed="True" result="Success" success="True" time="0.060" asserts="4" />
+                      <test-case name="Tests.Unit.Controllers.HomeControllerTests.Index_Should_Retrieve_List_Of_Bookmarks_From_QueryService" executed="True" result="Success" success="True" time="0.004" asserts="0" />
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

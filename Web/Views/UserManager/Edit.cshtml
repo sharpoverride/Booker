@@ -1,0 +1,88 @@
+﻿@model Web.Models.UserManager.UserManagerEditModel
+@{
+	ViewBag.Title = "Edit User " + Model.User.UserName;
+}
+<div class="six_column section page">
+	<div class="column_content">
+		<div class="six_column page_header">
+			<h2>
+				Editing @Model.User.UserName</h2>
+		</div>
+		<div class="six_column section">
+			<p class="info request-submitted" style="display: none;">
+				You're request has been submitted. The changes will be applied shortly.
+			</p>
+		</div>
+		<div class="six_column section">
+			<h3>
+				Roles</h3>
+			<hr />
+			@foreach (var role in Model.Roles)
+   {
+				<div class="six_column section">
+					<div class="three column">
+						@role.Role.Name
+					</div>
+					<div class="three column">
+						@if (!@role.IsLinked)
+	  {
+							<button class="assign-role sexybutton sexysimple sexygreen" 
+                                roleId ='@role.Role.Id'
+                                empId = '@Model.User.Id' 
+                                action="@Url.Action("Assign")">
+								Assign
+							</button>
+	  }
+	  else
+	  {
+							<button class="unassign-role sexybutton sexysimple sexyred" 
+                                roleId ='@role.Role.Id'
+                                empId = '@Model.User.Id' 
+                                action="@Url.Action("UnAssign")">
+								Remove
+							</button>
+	  }
+					</div>
+				</div>
+   }
+		</div>
+	</div>
+</div>
+@section scripts{
+	<script type="text/javascript" language="javascript">
+
+		$(function () {
+			function performActionOn(item) {
+				var action = item.attr('action');
+				var roleId = item.attr('roleId');
+				var empId = item.attr('empId');
+				$.post(action, { UserId: empId, roleId: roleId });
+
+				var requestSubmitted = $(".request-submitted");
+
+				requestSubmitted.show("slow").delay(3000).hide('normal');
+
+			}
+
+			$(".assign-role").click(function () {
+				var current = $(this);
+
+				current.replaceWith("<span>Role is being assigned. Refresh to view changes </span>");
+
+				performActionOn(current);
+
+
+			});
+
+			$(".unassign-role").click(function () {
+				var current = $(this);
+
+				current.replaceWith("<span>Role is being unassigned. Refresh to view changes</span>");
+
+				performActionOn(current);
+			});
+
+
+		});
+	</script>
+}

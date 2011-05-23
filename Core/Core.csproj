@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D60E4952-6F10-4285-A42D-352D11A15711}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Core</RootNamespace>
+    <AssemblyName>Core</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxMin, Version=4.13.4076.28499, Culture=neutral, PublicKeyToken=24297a69a7eae424, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AjaxMin.4.13.4076.28499\lib\AjaxMin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\XAct.EntityLibrary5.0.0.2\lib\net20\Microsoft.Practices.EnterpriseLibrary.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="Novell.Directory.Ldap, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\packages\Novell.Directory.Ldap.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Domain\DomainEntity.cs" />
+    <Compile Include="Domain\Employee.cs" />
+    <Compile Include="Domain\Permission.cs" />
+    <Compile Include="Persistence\IDeleteCommand.cs" />
+    <Compile Include="Persistence\IDomainCommand.cs" />
+    <Compile Include="Persistence\IDomainQuery.cs" />
+    <Compile Include="Domain\Role.cs" />
+    <Compile Include="Persistence\IQueryService.cs" />
+    <Compile Include="Persistence\ISaveOrUpdateCommand.cs" />
+    <Compile Include="Persistence\IUnitOfWork.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\EvozonPrincipal.cs" />
+    <Compile Include="Security\FunctionRights.cs" />
+    <Compile Include="Security\IFunctionRightsService.cs" />
+    <Compile Include="Services\Configuration\FileElement.cs" />
+    <Compile Include="Services\Configuration\FileElementCollection.cs" />
+    <Compile Include="Services\Configuration\GroupElement.cs" />
+    <Compile Include="Services\Configuration\GroupElementCollection.cs" />
+    <Compile Include="Services\Configuration\NamedConfigurationElementCollection.cs" />
+    <Compile Include="Services\Configuration\ScriptsConfigurationSection.cs" />
+    <Compile Include="Services\FormsAuthenticationService.cs" />
+    <Compile Include="Services\IAuthenticationService.cs" />
+    <Compile Include="Services\ICssProviderService.cs" />
+    <Compile Include="Services\ICssScriptCompressionService.cs" />
+    <Compile Include="Services\IJavaScriptCompression.cs" />
+    <Compile Include="Services\IJavaScriptProviderService.cs" />
+    <Compile Include="Services\IMembershipService.cs" />
+    <Compile Include="Services\Implementations\CachedCssProviderSerive.cs" />
+    <Compile Include="Services\Implementations\CachedJavaScriptProviderService.cs" />
+    <Compile Include="Services\Implementations\CssConfigurationProviderService.cs" />
+    <Compile Include="Services\Implementations\JavaScriptConfigurationProviderService.cs" />
+    <Compile Include="Services\Implementations\MicrosoftJavascriptMinifierCompressionService.cs" />
+    <Compile Include="Services\Implementations\MicrosoftMinifierCssCompresionService.cs" />
+    <Compile Include="Services\IScriptCompressionService.cs" />
+    <Compile Include="Services\LdapMembershipService.cs" />
+    <Compile Include="Services\MimeTypeResolverService.cs" />
+    <Compile Include="Services\WebApplicationFileService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

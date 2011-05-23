@@ -1,0 +1,2 @@
+Enterprise Library 5 is a relatively huge NuGet package. 
+You probably don't need a reference to everything that just got imported: go and remove all that is not strictly necessary for the execution of your application.

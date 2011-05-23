@@ -1,0 +1,1826 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EB88EB15-ABF0-4CBD-9D90-0B746DAAC34D}</ProjectGuid>
+    <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Web</RootNamespace>
+    <AssemblyName>Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxMin">
+      <HintPath>..\packages\AjaxMin.4.13.4076.28499\lib\AjaxMin.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core, Version=2.5.1.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.2.5.2\lib\NET35\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentNHibernate, Version=1.2.0.712, Culture=neutral, PublicKeyToken=8aa435e3cb308880, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentNHibernate.1.2.0.712\lib\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Iesi.Collections.3.1.0.4000\lib\Net35\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\XAct.EntityLibrary5.0.0.2\lib\net20\Microsoft.Practices.EnterpriseLibrary.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\XAct.EntityLibrary5.0.0.2\lib\net20\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.2.0\lib\20\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.2.0\lib\20\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.2.0\lib\20\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.2.0\lib\20\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception.Configuration, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.2.0\lib\20\Microsoft.Practices.Unity.Interception.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc">
+      <HintPath>..\packages\Mvc3Futures.3.0.20105.0\lib\Microsoft.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=3.1.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.3.1.0.4000\lib\Net35\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.ByteCode.Castle, Version=3.1.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.Castle.3.1.0.4000\lib\Net35\NHibernate.ByteCode.Castle.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Entity">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Entity">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Abstractions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Routing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.EnterpriseServices">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bootstrap\AppSettings.cs" />
+    <Compile Include="Bootstrap\Container\AssetRoutesRegistrar.cs" />
+    <Compile Include="Bootstrap\Container\AuthRegistrar.cs" />
+    <Compile Include="Bootstrap\Container\ContainerRegistrar.cs" />
+    <Compile Include="Bootstrap\Container\EnterpriseLibraryRegistrar.cs" />
+    <Compile Include="Bootstrap\Container\IUnityContainerAccesor.cs" />
+    <Compile Include="Bootstrap\Container\MinificationRegistrar.cs" />
+    <Compile Include="Bootstrap\Container\PersistenceRegistrar.cs" />
+    <Compile Include="Bootstrap\Container\SecurityRegistrar.cs" />
+    <Compile Include="Bootstrap\Container\UnityControllerFactory.cs" />
+    <Compile Include="Bootstrap\Routes\AssetRoutesRegistrar.cs" />
+    <Compile Include="Bootstrap\Routes\DefaultRouteRegistrar.cs" />
+    <Compile Include="Bootstrap\Routes\IgnoredRoutesRegistrar.cs" />
+    <Compile Include="Bootstrap\Routes\RoleManagerRegistrar.cs" />
+    <Compile Include="Bootstrap\Routes\RoutesRegistrar.cs" />
+    <Compile Include="Bootstrap\Routes\ScriptsRoutesRegistrar.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AssetsController.cs" />
+    <Compile Include="Controllers\CssController.cs" />
+    <Compile Include="Controllers\UserManagerController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\JavascriptController.cs" />
+    <Compile Include="Controllers\RoleManagerController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\Binders\RoleManagerEditInputBinder.cs" />
+    <Compile Include="Helpers\LinkExtensions.cs" />
+    <Compile Include="Models\Account\ChangePasswordModel.cs" />
+    <Compile Include="Models\Account\LogOnModel.cs" />
+    <Compile Include="Models\Account\RegisterModel.cs" />
+    <Compile Include="Models\UserManager\UserManagerAssignModel.cs" />
+    <Compile Include="Models\UserManager\UserManagerCreateModel.cs" />
+    <Compile Include="Models\UserManager\UserManagerEditModel.cs" />
+    <Compile Include="Models\UserManager\UserManagerListModel.cs" />
+    <Compile Include="Models\UserManager\UserManagerUnAssignModel.cs" />
+    <Compile Include="Models\Home\AboutModel.cs" />
+    <Compile Include="Models\Home\AddBookmark.cs" />
+    <Compile Include="Models\Home\EditBookmark.cs" />
+    <Compile Include="Models\Home\IndexModel.cs" />
+    <Compile Include="Models\RoleManager\RoleManagerAssignModel.cs" />
+    <Compile Include="Models\RoleManager\RoleManagerCreateInput.cs" />
+    <Compile Include="Models\RoleManager\RoleManagerCreateOutputModel.cs" />
+    <Compile Include="Models\RoleManager\RoleManagerEditInput.cs" />
+    <Compile Include="Models\RoleManager\RoleManagerEditOutput.cs" />
+    <Compile Include="Models\RoleManager\RoleManagerIndexOutputModel.cs" />
+    <Compile Include="Models\RoleManager\RoleManagerUnAssignModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\RequiresAttribute.cs" />
+    <Compile Include="Validation\Account\MembershipStatusCodeConverter.cs" />
+    <Compile Include="Validation\Account\PropertiesMustMatchAttribute.cs" />
+    <Compile Include="Validation\Account\ValidatePasswordLengthAttribute.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\css\jquery-ui-1.8.6.custom.css" />
+    <Content Include="Assets\css\sexybuttons.css" />
+    <Content Include="Assets\css\tasklist.css" />
+    <Content Include="Assets\css\tasklistreview.css" />
+    <Content Include="Assets\img\dots-white.gif" />
+    <Content Include="Assets\img\evozon-logo.png" />
+    <Content Include="Assets\img\evozon_02.jpg" />
+    <Content Include="Assets\img\evozon_logo.gif" />
+    <Content Include="Assets\img\icons\silk\accept.png" />
+    <Content Include="Assets\img\icons\silk\add.png" />
+    <Content Include="Assets\img\icons\silk\anchor.png" />
+    <Content Include="Assets\img\icons\silk\application.png" />
+    <Content Include="Assets\img\icons\silk\application_add.png" />
+    <Content Include="Assets\img\icons\silk\application_cascade.png" />
+    <Content Include="Assets\img\icons\silk\application_delete.png" />
+    <Content Include="Assets\img\icons\silk\application_double.png" />
+    <Content Include="Assets\img\icons\silk\application_edit.png" />
+    <Content Include="Assets\img\icons\silk\application_error.png" />
+    <Content Include="Assets\img\icons\silk\application_form.png" />
+    <Content Include="Assets\img\icons\silk\application_form_add.png" />
+    <Content Include="Assets\img\icons\silk\application_form_delete.png" />
+    <Content Include="Assets\img\icons\silk\application_form_edit.png" />
+    <Content Include="Assets\img\icons\silk\application_form_magnify.png" />
+    <Content Include="Assets\img\icons\silk\application_get.png" />
+    <Content Include="Assets\img\icons\silk\application_go.png" />
+    <Content Include="Assets\img\icons\silk\application_home.png" />
+    <Content Include="Assets\img\icons\silk\application_key.png" />
+    <Content Include="Assets\img\icons\silk\application_lightning.png" />
+    <Content Include="Assets\img\icons\silk\application_link.png" />
+    <Content Include="Assets\img\icons\silk\application_osx.png" />
+    <Content Include="Assets\img\icons\silk\application_osx_add.png" />
+    <Content Include="Assets\img\icons\silk\application_osx_cascade.png" />
+    <Content Include="Assets\img\icons\silk\application_osx_delete.png" />
+    <Content Include="Assets\img\icons\silk\application_osx_double.png" />
+    <Content Include="Assets\img\icons\silk\application_osx_error.png" />
+    <Content Include="Assets\img\icons\silk\application_osx_get.png" />
+    <Content Include="Assets\img\icons\silk\application_osx_go.png" />
+    <Content Include="Assets\img\icons\silk\application_osx_home.png" />
+    <Content Include="Assets\img\icons\silk\application_osx_key.png" />
+    <Content Include="Assets\img\icons\silk\application_osx_lightning.png" />
+    <Content Include="Assets\img\icons\silk\application_osx_link.png" />
+    <Content Include="Assets\img\icons\silk\application_osx_split.png" />
+    <Content Include="Assets\img\icons\silk\application_osx_start.png" />
+    <Content Include="Assets\img\icons\silk\application_osx_stop.png" />
+    <Content Include="Assets\img\icons\silk\application_osx_terminal.png" />
+    <Content Include="Assets\img\icons\silk\application_put.png" />
+    <Content Include="Assets\img\icons\silk\application_side_boxes.png" />
+    <Content Include="Assets\img\icons\silk\application_side_contract.png" />
+    <Content Include="Assets\img\icons\silk\application_side_expand.png" />
+    <Content Include="Assets\img\icons\silk\application_side_list.png" />
+    <Content Include="Assets\img\icons\silk\application_side_tree.png" />
+    <Content Include="Assets\img\icons\silk\application_split.png" />
+    <Content Include="Assets\img\icons\silk\application_start.png" />
+    <Content Include="Assets\img\icons\silk\application_stop.png" />
+    <Content Include="Assets\img\icons\silk\application_tile_horizontal.png" />
+    <Content Include="Assets\img\icons\silk\application_tile_vertical.png" />
+    <Content Include="Assets\img\icons\silk\application_view_columns.png" />
+    <Content Include="Assets\img\icons\silk\application_view_detail.png" />
+    <Content Include="Assets\img\icons\silk\application_view_gallery.png" />
+    <Content Include="Assets\img\icons\silk\application_view_icons.png" />
+    <Content Include="Assets\img\icons\silk\application_view_list.png" />
+    <Content Include="Assets\img\icons\silk\application_view_tile.png" />
+    <Content Include="Assets\img\icons\silk\application_xp.png" />
+    <Content Include="Assets\img\icons\silk\application_xp_terminal.png" />
+    <Content Include="Assets\img\icons\silk\arrow_branch.png" />
+    <Content Include="Assets\img\icons\silk\arrow_divide.png" />
+    <Content Include="Assets\img\icons\silk\arrow_down.png" />
+    <Content Include="Assets\img\icons\silk\arrow_ew.png" />
+    <Content Include="Assets\img\icons\silk\arrow_in.png" />
+    <Content Include="Assets\img\icons\silk\arrow_inout.png" />
+    <Content Include="Assets\img\icons\silk\arrow_in_longer.png" />
+    <Content Include="Assets\img\icons\silk\arrow_join.png" />
+    <Content Include="Assets\img\icons\silk\arrow_left.png" />
+    <Content Include="Assets\img\icons\silk\arrow_merge.png" />
+    <Content Include="Assets\img\icons\silk\arrow_ne.png" />
+    <Content Include="Assets\img\icons\silk\arrow_ns.png" />
+    <Content Include="Assets\img\icons\silk\arrow_nsew.png" />
+    <Content Include="Assets\img\icons\silk\arrow_nw.png" />
+    <Content Include="Assets\img\icons\silk\arrow_nw_ne_sw_se.png" />
+    <Content Include="Assets\img\icons\silk\arrow_nw_se.png" />
+    <Content Include="Assets\img\icons\silk\arrow_out.png" />
+    <Content Include="Assets\img\icons\silk\arrow_out_longer.png" />
+    <Content Include="Assets\img\icons\silk\arrow_redo.png" />
+    <Content Include="Assets\img\icons\silk\arrow_refresh.png" />
+    <Content Include="Assets\img\icons\silk\arrow_refresh_small.png" />
+    <Content Include="Assets\img\icons\silk\arrow_right.png" />
+    <Content Include="Assets\img\icons\silk\arrow_rotate_anticlockwise.png" />
+    <Content Include="Assets\img\icons\silk\arrow_rotate_clockwise.png" />
+    <Content Include="Assets\img\icons\silk\arrow_se.png" />
+    <Content Include="Assets\img\icons\silk\arrow_sw.png" />
+    <Content Include="Assets\img\icons\silk\arrow_switch.png" />
+    <Content Include="Assets\img\icons\silk\arrow_switch_bluegreen.png" />
+    <Content Include="Assets\img\icons\silk\arrow_sw_ne.png" />
+    <Content Include="Assets\img\icons\silk\arrow_turn_left.png" />
+    <Content Include="Assets\img\icons\silk\arrow_turn_right.png" />
+    <Content Include="Assets\img\icons\silk\arrow_undo.png" />
+    <Content Include="Assets\img\icons\silk\arrow_up.png" />
+    <Content Include="Assets\img\icons\silk\asterisk_orange.png" />
+    <Content Include="Assets\img\icons\silk\asterisk_red.png" />
+    <Content Include="Assets\img\icons\silk\asterisk_yellow.png" />
+    <Content Include="Assets\img\icons\silk\attach.png" />
+    <Content Include="Assets\img\icons\silk\award_star_add.png" />
+    <Content Include="Assets\img\icons\silk\award_star_bronze_1.png" />
+    <Content Include="Assets\img\icons\silk\award_star_bronze_2.png" />
+    <Content Include="Assets\img\icons\silk\award_star_bronze_3.png" />
+    <Content Include="Assets\img\icons\silk\award_star_delete.png" />
+    <Content Include="Assets\img\icons\silk\award_star_gold_1.png" />
+    <Content Include="Assets\img\icons\silk\award_star_gold_2.png" />
+    <Content Include="Assets\img\icons\silk\award_star_gold_3.png" />
+    <Content Include="Assets\img\icons\silk\award_star_silver_1.png" />
+    <Content Include="Assets\img\icons\silk\award_star_silver_2.png" />
+    <Content Include="Assets\img\icons\silk\award_star_silver_3.png" />
+    <Content Include="Assets\img\icons\silk\basket.png" />
+    <Content Include="Assets\img\icons\silk\basket_add.png" />
+    <Content Include="Assets\img\icons\silk\basket_delete.png" />
+    <Content Include="Assets\img\icons\silk\basket_edit.png" />
+    <Content Include="Assets\img\icons\silk\basket_error.png" />
+    <Content Include="Assets\img\icons\silk\basket_go.png" />
+    <Content Include="Assets\img\icons\silk\basket_put.png" />
+    <Content Include="Assets\img\icons\silk\basket_remove.png" />
+    <Content Include="Assets\img\icons\silk\bell.png" />
+    <Content Include="Assets\img\icons\silk\bell_add.png" />
+    <Content Include="Assets\img\icons\silk\bell_delete.png" />
+    <Content Include="Assets\img\icons\silk\bell_error.png" />
+    <Content Include="Assets\img\icons\silk\bell_go.png" />
+    <Content Include="Assets\img\icons\silk\bell_link.png" />
+    <Content Include="Assets\img\icons\silk\bell_silver.png" />
+    <Content Include="Assets\img\icons\silk\bell_silver_start.png" />
+    <Content Include="Assets\img\icons\silk\bell_silver_stop.png" />
+    <Content Include="Assets\img\icons\silk\bell_start.png" />
+    <Content Include="Assets\img\icons\silk\bell_stop.png" />
+    <Content Include="Assets\img\icons\silk\bin.png" />
+    <Content Include="Assets\img\icons\silk\bin_closed.png" />
+    <Content Include="Assets\img\icons\silk\bin_empty.png" />
+    <Content Include="Assets\img\icons\silk\bomb.png" />
+    <Content Include="Assets\img\icons\silk\book.png" />
+    <Content Include="Assets\img\icons\silk\bookmark.png" />
+    <Content Include="Assets\img\icons\silk\bookmark_add.png" />
+    <Content Include="Assets\img\icons\silk\bookmark_delete.png" />
+    <Content Include="Assets\img\icons\silk\bookmark_edit.png" />
+    <Content Include="Assets\img\icons\silk\bookmark_error.png" />
+    <Content Include="Assets\img\icons\silk\bookmark_go.png" />
+    <Content Include="Assets\img\icons\silk\book_add.png" />
+    <Content Include="Assets\img\icons\silk\book_addresses.png" />
+    <Content Include="Assets\img\icons\silk\book_addresses_add.png" />
+    <Content Include="Assets\img\icons\silk\book_addresses_delete.png" />
+    <Content Include="Assets\img\icons\silk\book_addresses_edit.png" />
+    <Content Include="Assets\img\icons\silk\book_addresses_error.png" />
+    <Content Include="Assets\img\icons\silk\book_addresses_key.png" />
+    <Content Include="Assets\img\icons\silk\book_delete.png" />
+    <Content Include="Assets\img\icons\silk\book_edit.png" />
+    <Content Include="Assets\img\icons\silk\book_error.png" />
+    <Content Include="Assets\img\icons\silk\book_go.png" />
+    <Content Include="Assets\img\icons\silk\book_key.png" />
+    <Content Include="Assets\img\icons\silk\book_link.png" />
+    <Content Include="Assets\img\icons\silk\book_magnify.png" />
+    <Content Include="Assets\img\icons\silk\book_next.png" />
+    <Content Include="Assets\img\icons\silk\book_open.png" />
+    <Content Include="Assets\img\icons\silk\book_open_mark.png" />
+    <Content Include="Assets\img\icons\silk\book_previous.png" />
+    <Content Include="Assets\img\icons\silk\book_red.png" />
+    <Content Include="Assets\img\icons\silk\book_tabs.png" />
+    <Content Include="Assets\img\icons\silk\border_all.png" />
+    <Content Include="Assets\img\icons\silk\border_bottom.png" />
+    <Content Include="Assets\img\icons\silk\border_draw.png" />
+    <Content Include="Assets\img\icons\silk\border_inner.png" />
+    <Content Include="Assets\img\icons\silk\border_inner_horizontal.png" />
+    <Content Include="Assets\img\icons\silk\border_inner_vertical.png" />
+    <Content Include="Assets\img\icons\silk\border_left.png" />
+    <Content Include="Assets\img\icons\silk\border_none.png" />
+    <Content Include="Assets\img\icons\silk\border_outer.png" />
+    <Content Include="Assets\img\icons\silk\border_right.png" />
+    <Content Include="Assets\img\icons\silk\border_top.png" />
+    <Content Include="Assets\img\icons\silk\box.png" />
+    <Content Include="Assets\img\icons\silk\box_error.png" />
+    <Content Include="Assets\img\icons\silk\box_picture.png" />
+    <Content Include="Assets\img\icons\silk\box_world.png" />
+    <Content Include="Assets\img\icons\silk\brick.png" />
+    <Content Include="Assets\img\icons\silk\bricks.png" />
+    <Content Include="Assets\img\icons\silk\brick_add.png" />
+    <Content Include="Assets\img\icons\silk\brick_delete.png" />
+    <Content Include="Assets\img\icons\silk\brick_edit.png" />
+    <Content Include="Assets\img\icons\silk\brick_error.png" />
+    <Content Include="Assets\img\icons\silk\brick_go.png" />
+    <Content Include="Assets\img\icons\silk\brick_link.png" />
+    <Content Include="Assets\img\icons\silk\brick_magnify.png" />
+    <Content Include="Assets\img\icons\silk\briefcase.png" />
+    <Content Include="Assets\img\icons\silk\bug.png" />
+    <Content Include="Assets\img\icons\silk\bug_add.png" />
+    <Content Include="Assets\img\icons\silk\bug_delete.png" />
+    <Content Include="Assets\img\icons\silk\bug_edit.png" />
+    <Content Include="Assets\img\icons\silk\bug_error.png" />
+    <Content Include="Assets\img\icons\silk\bug_fix.png" />
+    <Content Include="Assets\img\icons\silk\bug_go.png" />
+    <Content Include="Assets\img\icons\silk\bug_link.png" />
+    <Content Include="Assets\img\icons\silk\bug_magnify.png" />
+    <Content Include="Assets\img\icons\silk\build.png" />
+    <Content Include="Assets\img\icons\silk\building.png" />
+    <Content Include="Assets\img\icons\silk\building_add.png" />
+    <Content Include="Assets\img\icons\silk\building_delete.png" />
+    <Content Include="Assets\img\icons\silk\building_edit.png" />
+    <Content Include="Assets\img\icons\silk\building_error.png" />
+    <Content Include="Assets\img\icons\silk\building_go.png" />
+    <Content Include="Assets\img\icons\silk\building_key.png" />
+    <Content Include="Assets\img\icons\silk\building_link.png" />
+    <Content Include="Assets\img\icons\silk\build_cancel.png" />
+    <Content Include="Assets\img\icons\silk\bullet_add.png" />
+    <Content Include="Assets\img\icons\silk\bullet_arrow_bottom.png" />
+    <Content Include="Assets\img\icons\silk\bullet_arrow_down.png" />
+    <Content Include="Assets\img\icons\silk\bullet_arrow_top.png" />
+    <Content Include="Assets\img\icons\silk\bullet_arrow_up.png" />
+    <Content Include="Assets\img\icons\silk\bullet_black.png" />
+    <Content Include="Assets\img\icons\silk\bullet_blue.png" />
+    <Content Include="Assets\img\icons\silk\bullet_connect.png" />
+    <Content Include="Assets\img\icons\silk\bullet_cross.png" />
+    <Content Include="Assets\img\icons\silk\bullet_database.png" />
+    <Content Include="Assets\img\icons\silk\bullet_database_yellow.png" />
+    <Content Include="Assets\img\icons\silk\bullet_delete.png" />
+    <Content Include="Assets\img\icons\silk\bullet_disk.png" />
+    <Content Include="Assets\img\icons\silk\bullet_earth.png" />
+    <Content Include="Assets\img\icons\silk\bullet_edit.png" />
+    <Content Include="Assets\img\icons\silk\bullet_eject.png" />
+    <Content Include="Assets\img\icons\silk\bullet_error.png" />
+    <Content Include="Assets\img\icons\silk\bullet_feed.png" />
+    <Content Include="Assets\img\icons\silk\bullet_get.png" />
+    <Content Include="Assets\img\icons\silk\bullet_go.png" />
+    <Content Include="Assets\img\icons\silk\bullet_green.png" />
+    <Content Include="Assets\img\icons\silk\bullet_home.png" />
+    <Content Include="Assets\img\icons\silk\bullet_key.png" />
+    <Content Include="Assets\img\icons\silk\bullet_left.png" />
+    <Content Include="Assets\img\icons\silk\bullet_lightning.png" />
+    <Content Include="Assets\img\icons\silk\bullet_magnify.png" />
+    <Content Include="Assets\img\icons\silk\bullet_minus.png" />
+    <Content Include="Assets\img\icons\silk\bullet_orange.png" />
+    <Content Include="Assets\img\icons\silk\bullet_page_white.png" />
+    <Content Include="Assets\img\icons\silk\bullet_picture.png" />
+    <Content Include="Assets\img\icons\silk\bullet_pink.png" />
+    <Content Include="Assets\img\icons\silk\bullet_plus.png" />
+    <Content Include="Assets\img\icons\silk\bullet_purple.png" />
+    <Content Include="Assets\img\icons\silk\bullet_red.png" />
+    <Content Include="Assets\img\icons\silk\bullet_right.png" />
+    <Content Include="Assets\img\icons\silk\bullet_shape.png" />
+    <Content Include="Assets\img\icons\silk\bullet_sparkle.png" />
+    <Content Include="Assets\img\icons\silk\bullet_star.png" />
+    <Content Include="Assets\img\icons\silk\bullet_start.png" />
+    <Content Include="Assets\img\icons\silk\bullet_stop.png" />
+    <Content Include="Assets\img\icons\silk\bullet_stop_alt.png" />
+    <Content Include="Assets\img\icons\silk\bullet_tick.png" />
+    <Content Include="Assets\img\icons\silk\bullet_toggle_minus.png" />
+    <Content Include="Assets\img\icons\silk\bullet_toggle_plus.png" />
+    <Content Include="Assets\img\icons\silk\bullet_white.png" />
+    <Content Include="Assets\img\icons\silk\bullet_wrench.png" />
+    <Content Include="Assets\img\icons\silk\bullet_wrench_red.png" />
+    <Content Include="Assets\img\icons\silk\bullet_yellow.png" />
+    <Content Include="Assets\img\icons\silk\button.png" />
+    <Content Include="Assets\img\icons\silk\cake.png" />
+    <Content Include="Assets\img\icons\silk\cake_out.png" />
+    <Content Include="Assets\img\icons\silk\cake_sliced.png" />
+    <Content Include="Assets\img\icons\silk\calculator.png" />
+    <Content Include="Assets\img\icons\silk\calculator_add.png" />
+    <Content Include="Assets\img\icons\silk\calculator_delete.png" />
+    <Content Include="Assets\img\icons\silk\calculator_edit.png" />
+    <Content Include="Assets\img\icons\silk\calculator_error.png" />
+    <Content Include="Assets\img\icons\silk\calculator_link.png" />
+    <Content Include="Assets\img\icons\silk\calendar.png" />
+    <Content Include="Assets\img\icons\silk\calendar_add.png" />
+    <Content Include="Assets\img\icons\silk\calendar_delete.png" />
+    <Content Include="Assets\img\icons\silk\calendar_edit.png" />
+    <Content Include="Assets\img\icons\silk\calendar_link.png" />
+    <Content Include="Assets\img\icons\silk\calendar_select_day.png" />
+    <Content Include="Assets\img\icons\silk\calendar_select_none.png" />
+    <Content Include="Assets\img\icons\silk\calendar_select_week.png" />
+    <Content Include="Assets\img\icons\silk\calendar_star.png" />
+    <Content Include="Assets\img\icons\silk\calendar_view_day.png" />
+    <Content Include="Assets\img\icons\silk\calendar_view_month.png" />
+    <Content Include="Assets\img\icons\silk\calendar_view_week.png" />
+    <Content Include="Assets\img\icons\silk\camera.png" />
+    <Content Include="Assets\img\icons\silk\camera_add.png" />
+    <Content Include="Assets\img\icons\silk\camera_connect.png" />
+    <Content Include="Assets\img\icons\silk\camera_delete.png" />
+    <Content Include="Assets\img\icons\silk\camera_edit.png" />
+    <Content Include="Assets\img\icons\silk\camera_error.png" />
+    <Content Include="Assets\img\icons\silk\camera_go.png" />
+    <Content Include="Assets\img\icons\silk\camera_link.png" />
+    <Content Include="Assets\img\icons\silk\camera_magnify.png" />
+    <Content Include="Assets\img\icons\silk\camera_picture.png" />
+    <Content Include="Assets\img\icons\silk\camera_small.png" />
+    <Content Include="Assets\img\icons\silk\camera_start.png" />
+    <Content Include="Assets\img\icons\silk\camera_stop.png" />
+    <Content Include="Assets\img\icons\silk\cancel.png" />
+    <Content Include="Assets\img\icons\silk\car.png" />
+    <Content Include="Assets\img\icons\silk\cart.png" />
+    <Content Include="Assets\img\icons\silk\cart_add.png" />
+    <Content Include="Assets\img\icons\silk\cart_delete.png" />
+    <Content Include="Assets\img\icons\silk\cart_edit.png" />
+    <Content Include="Assets\img\icons\silk\cart_error.png" />
+    <Content Include="Assets\img\icons\silk\cart_full.png" />
+    <Content Include="Assets\img\icons\silk\cart_go.png" />
+    <Content Include="Assets\img\icons\silk\cart_magnify.png" />
+    <Content Include="Assets\img\icons\silk\cart_put.png" />
+    <Content Include="Assets\img\icons\silk\cart_remove.png" />
+    <Content Include="Assets\img\icons\silk\car_add.png" />
+    <Content Include="Assets\img\icons\silk\car_delete.png" />
+    <Content Include="Assets\img\icons\silk\car_error.png" />
+    <Content Include="Assets\img\icons\silk\car_red.png" />
+    <Content Include="Assets\img\icons\silk\car_start.png" />
+    <Content Include="Assets\img\icons\silk\car_stop.png" />
+    <Content Include="Assets\img\icons\silk\cd.png" />
+    <Content Include="Assets\img\icons\silk\cdr.png" />
+    <Content Include="Assets\img\icons\silk\cdr_add.png" />
+    <Content Include="Assets\img\icons\silk\cdr_burn.png" />
+    <Content Include="Assets\img\icons\silk\cdr_cross.png" />
+    <Content Include="Assets\img\icons\silk\cdr_delete.png" />
+    <Content Include="Assets\img\icons\silk\cdr_edit.png" />
+    <Content Include="Assets\img\icons\silk\cdr_eject.png" />
+    <Content Include="Assets\img\icons\silk\cdr_error.png" />
+    <Content Include="Assets\img\icons\silk\cdr_go.png" />
+    <Content Include="Assets\img\icons\silk\cdr_magnify.png" />
+    <Content Include="Assets\img\icons\silk\cdr_play.png" />
+    <Content Include="Assets\img\icons\silk\cdr_start.png" />
+    <Content Include="Assets\img\icons\silk\cdr_stop.png" />
+    <Content Include="Assets\img\icons\silk\cdr_stop_alt.png" />
+    <Content Include="Assets\img\icons\silk\cdr_tick.png" />
+    <Content Include="Assets\img\icons\silk\cd_add.png" />
+    <Content Include="Assets\img\icons\silk\cd_burn.png" />
+    <Content Include="Assets\img\icons\silk\cd_delete.png" />
+    <Content Include="Assets\img\icons\silk\cd_edit.png" />
+    <Content Include="Assets\img\icons\silk\cd_eject.png" />
+    <Content Include="Assets\img\icons\silk\cd_go.png" />
+    <Content Include="Assets\img\icons\silk\cd_magnify.png" />
+    <Content Include="Assets\img\icons\silk\cd_play.png" />
+    <Content Include="Assets\img\icons\silk\cd_stop.png" />
+    <Content Include="Assets\img\icons\silk\cd_stop_alt.png" />
+    <Content Include="Assets\img\icons\silk\cd_tick.png" />
+    <Content Include="Assets\img\icons\silk\chart_bar.png" />
+    <Content Include="Assets\img\icons\silk\chart_bar_add.png" />
+    <Content Include="Assets\img\icons\silk\chart_bar_delete.png" />
+    <Content Include="Assets\img\icons\silk\chart_bar_edit.png" />
+    <Content Include="Assets\img\icons\silk\chart_bar_error.png" />
+    <Content Include="Assets\img\icons\silk\chart_bar_link.png" />
+    <Content Include="Assets\img\icons\silk\chart_curve.png" />
+    <Content Include="Assets\img\icons\silk\chart_curve_add.png" />
+    <Content Include="Assets\img\icons\silk\chart_curve_delete.png" />
+    <Content Include="Assets\img\icons\silk\chart_curve_edit.png" />
+    <Content Include="Assets\img\icons\silk\chart_curve_error.png" />
+    <Content Include="Assets\img\icons\silk\chart_curve_go.png" />
+    <Content Include="Assets\img\icons\silk\chart_curve_link.png" />
+    <Content Include="Assets\img\icons\silk\chart_line.png" />
+    <Content Include="Assets\img\icons\silk\chart_line_add.png" />
+    <Content Include="Assets\img\icons\silk\chart_line_delete.png" />
+    <Content Include="Assets\img\icons\silk\chart_line_edit.png" />
+    <Content Include="Assets\img\icons\silk\chart_line_error.png" />
+    <Content Include="Assets\img\icons\silk\chart_line_link.png" />
+    <Content Include="Assets\img\icons\silk\chart_organisation.png" />
+    <Content Include="Assets\img\icons\silk\chart_organisation_add.png" />
+    <Content Include="Assets\img\icons\silk\chart_organisation_delete.png" />
+    <Content Include="Assets\img\icons\silk\chart_org_inverted.png" />
+    <Content Include="Assets\img\icons\silk\chart_pie.png" />
+    <Content Include="Assets\img\icons\silk\chart_pie_add.png" />
+    <Content Include="Assets\img\icons\silk\chart_pie_delete.png" />
+    <Content Include="Assets\img\icons\silk\chart_pie_edit.png" />
+    <Content Include="Assets\img\icons\silk\chart_pie_error.png" />
+    <Content Include="Assets\img\icons\silk\chart_pie_lightning.png" />
+    <Content Include="Assets\img\icons\silk\chart_pie_link.png" />
+    <Content Include="Assets\img\icons\silk\check_error.png" />
+    <Content Include="Assets\img\icons\silk\clipboard.png" />
+    <Content Include="Assets\img\icons\silk\clock.png" />
+    <Content Include="Assets\img\icons\silk\clock_add.png" />
+    <Content Include="Assets\img\icons\silk\clock_delete.png" />
+    <Content Include="Assets\img\icons\silk\clock_edit.png" />
+    <Content Include="Assets\img\icons\silk\clock_error.png" />
+    <Content Include="Assets\img\icons\silk\clock_go.png" />
+    <Content Include="Assets\img\icons\silk\clock_link.png" />
+    <Content Include="Assets\img\icons\silk\clock_pause.png" />
+    <Content Include="Assets\img\icons\silk\clock_play.png" />
+    <Content Include="Assets\img\icons\silk\clock_red.png" />
+    <Content Include="Assets\img\icons\silk\clock_start.png" />
+    <Content Include="Assets\img\icons\silk\clock_stop.png" />
+    <Content Include="Assets\img\icons\silk\cmy.png" />
+    <Content Include="Assets\img\icons\silk\cog.png" />
+    <Content Include="Assets\img\icons\silk\cog_add.png" />
+    <Content Include="Assets\img\icons\silk\cog_delete.png" />
+    <Content Include="Assets\img\icons\silk\cog_edit.png" />
+    <Content Include="Assets\img\icons\silk\cog_error.png" />
+    <Content Include="Assets\img\icons\silk\cog_go.png" />
+    <Content Include="Assets\img\icons\silk\cog_start.png" />
+    <Content Include="Assets\img\icons\silk\cog_stop.png" />
+    <Content Include="Assets\img\icons\silk\coins.png" />
+    <Content Include="Assets\img\icons\silk\coins_add.png" />
+    <Content Include="Assets\img\icons\silk\coins_delete.png" />
+    <Content Include="Assets\img\icons\silk\color.png" />
+    <Content Include="Assets\img\icons\silk\color_swatch.png" />
+    <Content Include="Assets\img\icons\silk\color_wheel.png" />
+    <Content Include="Assets\img\icons\silk\comment.png" />
+    <Content Include="Assets\img\icons\silk\comments.png" />
+    <Content Include="Assets\img\icons\silk\comments_add.png" />
+    <Content Include="Assets\img\icons\silk\comments_delete.png" />
+    <Content Include="Assets\img\icons\silk\comment_add.png" />
+    <Content Include="Assets\img\icons\silk\comment_delete.png" />
+    <Content Include="Assets\img\icons\silk\comment_dull.png" />
+    <Content Include="Assets\img\icons\silk\comment_edit.png" />
+    <Content Include="Assets\img\icons\silk\comment_play.png" />
+    <Content Include="Assets\img\icons\silk\comment_record.png" />
+    <Content Include="Assets\img\icons\silk\compass.png" />
+    <Content Include="Assets\img\icons\silk\compress.png" />
+    <Content Include="Assets\img\icons\silk\computer.png" />
+    <Content Include="Assets\img\icons\silk\computer_add.png" />
+    <Content Include="Assets\img\icons\silk\computer_connect.png" />
+    <Content Include="Assets\img\icons\silk\computer_delete.png" />
+    <Content Include="Assets\img\icons\silk\computer_edit.png" />
+    <Content Include="Assets\img\icons\silk\computer_error.png" />
+    <Content Include="Assets\img\icons\silk\computer_go.png" />
+    <Content Include="Assets\img\icons\silk\computer_key.png" />
+    <Content Include="Assets\img\icons\silk\computer_link.png" />
+    <Content Include="Assets\img\icons\silk\computer_magnify.png" />
+    <Content Include="Assets\img\icons\silk\computer_off.png" />
+    <Content Include="Assets\img\icons\silk\computer_start.png" />
+    <Content Include="Assets\img\icons\silk\computer_stop.png" />
+    <Content Include="Assets\img\icons\silk\computer_wrench.png" />
+    <Content Include="Assets\img\icons\silk\connect.png" />
+    <Content Include="Assets\img\icons\silk\contrast.png" />
+    <Content Include="Assets\img\icons\silk\contrast_decrease.png" />
+    <Content Include="Assets\img\icons\silk\contrast_high.png" />
+    <Content Include="Assets\img\icons\silk\contrast_increase.png" />
+    <Content Include="Assets\img\icons\silk\contrast_low.png" />
+    <Content Include="Assets\img\icons\silk\controller.png" />
+    <Content Include="Assets\img\icons\silk\controller_add.png" />
+    <Content Include="Assets\img\icons\silk\controller_delete.png" />
+    <Content Include="Assets\img\icons\silk\controller_error.png" />
+    <Content Include="Assets\img\icons\silk\control_add.png" />
+    <Content Include="Assets\img\icons\silk\control_add_blue.png" />
+    <Content Include="Assets\img\icons\silk\control_blank.png" />
+    <Content Include="Assets\img\icons\silk\control_blank_blue.png" />
+    <Content Include="Assets\img\icons\silk\control_eject.png" />
+    <Content Include="Assets\img\icons\silk\control_eject_blue.png" />
+    <Content Include="Assets\img\icons\silk\control_end.png" />
+    <Content Include="Assets\img\icons\silk\control_end_blue.png" />
+    <Content Include="Assets\img\icons\silk\control_equalizer.png" />
+    <Content Include="Assets\img\icons\silk\control_equalizer_blue.png" />
+    <Content Include="Assets\img\icons\silk\control_fastforward.png" />
+    <Content Include="Assets\img\icons\silk\control_fastforward_blue.png" />
+    <Content Include="Assets\img\icons\silk\control_pause.png" />
+    <Content Include="Assets\img\icons\silk\control_pause_blue.png" />
+    <Content Include="Assets\img\icons\silk\control_play.png" />
+    <Content Include="Assets\img\icons\silk\control_play_blue.png" />
+    <Content Include="Assets\img\icons\silk\control_power.png" />
+    <Content Include="Assets\img\icons\silk\control_power_blue.png" />
+    <Content Include="Assets\img\icons\silk\control_record.png" />
+    <Content Include="Assets\img\icons\silk\control_record_blue.png" />
+    <Content Include="Assets\img\icons\silk\control_remove.png" />
+    <Content Include="Assets\img\icons\silk\control_remove_blue.png" />
+    <Content Include="Assets\img\icons\silk\control_repeat.png" />
+    <Content Include="Assets\img\icons\silk\control_repeat_blue.png" />
+    <Content Include="Assets\img\icons\silk\control_rewind.png" />
+    <Content Include="Assets\img\icons\silk\control_rewind_blue.png" />
+    <Content Include="Assets\img\icons\silk\control_start.png" />
+    <Content Include="Assets\img\icons\silk\control_start_blue.png" />
+    <Content Include="Assets\img\icons\silk\control_stop.png" />
+    <Content Include="Assets\img\icons\silk\control_stop_blue.png" />
+    <Content Include="Assets\img\icons\silk\creditcards.png" />
+    <Content Include="Assets\img\icons\silk\cross.png" />
+    <Content Include="Assets\img\icons\silk\css.png" />
+    <Content Include="Assets\img\icons\silk\css_add.png" />
+    <Content Include="Assets\img\icons\silk\css_delete.png" />
+    <Content Include="Assets\img\icons\silk\css_error.png" />
+    <Content Include="Assets\img\icons\silk\css_go.png" />
+    <Content Include="Assets\img\icons\silk\css_valid.png" />
+    <Content Include="Assets\img\icons\silk\cup.png" />
+    <Content Include="Assets\img\icons\silk\cup_add.png" />
+    <Content Include="Assets\img\icons\silk\cup_black.png" />
+    <Content Include="Assets\img\icons\silk\cup_delete.png" />
+    <Content Include="Assets\img\icons\silk\cup_edit.png" />
+    <Content Include="Assets\img\icons\silk\cup_error.png" />
+    <Content Include="Assets\img\icons\silk\cup_go.png" />
+    <Content Include="Assets\img\icons\silk\cup_green.png" />
+    <Content Include="Assets\img\icons\silk\cup_key.png" />
+    <Content Include="Assets\img\icons\silk\cup_link.png" />
+    <Content Include="Assets\img\icons\silk\cup_tea.png" />
+    <Content Include="Assets\img\icons\silk\cursor.png" />
+    <Content Include="Assets\img\icons\silk\cursor_small.png" />
+    <Content Include="Assets\img\icons\silk\cut.png" />
+    <Content Include="Assets\img\icons\silk\cut_red.png" />
+    <Content Include="Assets\img\icons\silk\database.png" />
+    <Content Include="Assets\img\icons\silk\database_add.png" />
+    <Content Include="Assets\img\icons\silk\database_connect.png" />
+    <Content Include="Assets\img\icons\silk\database_copy.png" />
+    <Content Include="Assets\img\icons\silk\database_delete.png" />
+    <Content Include="Assets\img\icons\silk\database_edit.png" />
+    <Content Include="Assets\img\icons\silk\database_error.png" />
+    <Content Include="Assets\img\icons\silk\database_gear.png" />
+    <Content Include="Assets\img\icons\silk\database_go.png" />
+    <Content Include="Assets\img\icons\silk\database_key.png" />
+    <Content Include="Assets\img\icons\silk\database_lightning.png" />
+    <Content Include="Assets\img\icons\silk\database_link.png" />
+    <Content Include="Assets\img\icons\silk\database_refresh.png" />
+    <Content Include="Assets\img\icons\silk\database_save.png" />
+    <Content Include="Assets\img\icons\silk\database_start.png" />
+    <Content Include="Assets\img\icons\silk\database_stop.png" />
+    <Content Include="Assets\img\icons\silk\database_table.png" />
+    <Content Include="Assets\img\icons\silk\database_wrench.png" />
+    <Content Include="Assets\img\icons\silk\database_yellow.png" />
+    <Content Include="Assets\img\icons\silk\database_yellow_start.png" />
+    <Content Include="Assets\img\icons\silk\database_yellow_stop.png" />
+    <Content Include="Assets\img\icons\silk\date.png" />
+    <Content Include="Assets\img\icons\silk\date_add.png" />
+    <Content Include="Assets\img\icons\silk\date_delete.png" />
+    <Content Include="Assets\img\icons\silk\date_edit.png" />
+    <Content Include="Assets\img\icons\silk\date_error.png" />
+    <Content Include="Assets\img\icons\silk\date_go.png" />
+    <Content Include="Assets\img\icons\silk\date_link.png" />
+    <Content Include="Assets\img\icons\silk\date_magnify.png" />
+    <Content Include="Assets\img\icons\silk\date_next.png" />
+    <Content Include="Assets\img\icons\silk\date_previous.png" />
+    <Content Include="Assets\img\icons\silk\decline.png" />
+    <Content Include="Assets\img\icons\silk\delete.png" />
+    <Content Include="Assets\img\icons\silk\device_stylus.png" />
+    <Content Include="Assets\img\icons\silk\disconnect.png" />
+    <Content Include="Assets\img\icons\silk\disk.png" />
+    <Content Include="Assets\img\icons\silk\disk_black.png" />
+    <Content Include="Assets\img\icons\silk\disk_black_error.png" />
+    <Content Include="Assets\img\icons\silk\disk_black_magnify.png" />
+    <Content Include="Assets\img\icons\silk\disk_download.png" />
+    <Content Include="Assets\img\icons\silk\disk_edit.png" />
+    <Content Include="Assets\img\icons\silk\disk_error.png" />
+    <Content Include="Assets\img\icons\silk\disk_magnify.png" />
+    <Content Include="Assets\img\icons\silk\disk_multiple.png" />
+    <Content Include="Assets\img\icons\silk\disk_upload.png" />
+    <Content Include="Assets\img\icons\silk\door.png" />
+    <Content Include="Assets\img\icons\silk\door_error.png" />
+    <Content Include="Assets\img\icons\silk\door_in.png" />
+    <Content Include="Assets\img\icons\silk\door_open.png" />
+    <Content Include="Assets\img\icons\silk\door_out.png" />
+    <Content Include="Assets\img\icons\silk\drink.png" />
+    <Content Include="Assets\img\icons\silk\drink_empty.png" />
+    <Content Include="Assets\img\icons\silk\drink_red.png" />
+    <Content Include="Assets\img\icons\silk\drive.png" />
+    <Content Include="Assets\img\icons\silk\drive_add.png" />
+    <Content Include="Assets\img\icons\silk\drive_burn.png" />
+    <Content Include="Assets\img\icons\silk\drive_cd.png" />
+    <Content Include="Assets\img\icons\silk\drive_cdr.png" />
+    <Content Include="Assets\img\icons\silk\drive_cd_empty.png" />
+    <Content Include="Assets\img\icons\silk\drive_delete.png" />
+    <Content Include="Assets\img\icons\silk\drive_disk.png" />
+    <Content Include="Assets\img\icons\silk\drive_edit.png" />
+    <Content Include="Assets\img\icons\silk\drive_error.png" />
+    <Content Include="Assets\img\icons\silk\drive_go.png" />
+    <Content Include="Assets\img\icons\silk\drive_key.png" />
+    <Content Include="Assets\img\icons\silk\drive_link.png" />
+    <Content Include="Assets\img\icons\silk\drive_magnify.png" />
+    <Content Include="Assets\img\icons\silk\drive_network.png" />
+    <Content Include="Assets\img\icons\silk\drive_network_error.png" />
+    <Content Include="Assets\img\icons\silk\drive_network_stop.png" />
+    <Content Include="Assets\img\icons\silk\drive_rename.png" />
+    <Content Include="Assets\img\icons\silk\drive_user.png" />
+    <Content Include="Assets\img\icons\silk\drive_web.png" />
+    <Content Include="Assets\img\icons\silk\dvd.png" />
+    <Content Include="Assets\img\icons\silk\dvd_add.png" />
+    <Content Include="Assets\img\icons\silk\dvd_delete.png" />
+    <Content Include="Assets\img\icons\silk\dvd_edit.png" />
+    <Content Include="Assets\img\icons\silk\dvd_error.png" />
+    <Content Include="Assets\img\icons\silk\dvd_go.png" />
+    <Content Include="Assets\img\icons\silk\dvd_key.png" />
+    <Content Include="Assets\img\icons\silk\dvd_link.png" />
+    <Content Include="Assets\img\icons\silk\dvd_start.png" />
+    <Content Include="Assets\img\icons\silk\dvd_stop.png" />
+    <Content Include="Assets\img\icons\silk\eject_blue.png" />
+    <Content Include="Assets\img\icons\silk\eject_green.png" />
+    <Content Include="Assets\img\icons\silk\email.png" />
+    <Content Include="Assets\img\icons\silk\email_add.png" />
+    <Content Include="Assets\img\icons\silk\email_attach.png" />
+    <Content Include="Assets\img\icons\silk\email_delete.png" />
+    <Content Include="Assets\img\icons\silk\email_edit.png" />
+    <Content Include="Assets\img\icons\silk\email_error.png" />
+    <Content Include="Assets\img\icons\silk\email_go.png" />
+    <Content Include="Assets\img\icons\silk\email_link.png" />
+    <Content Include="Assets\img\icons\silk\email_magnify.png" />
+    <Content Include="Assets\img\icons\silk\email_open.png" />
+    <Content Include="Assets\img\icons\silk\email_open_image.png" />
+    <Content Include="Assets\img\icons\silk\email_star.png" />
+    <Content Include="Assets\img\icons\silk\email_start.png" />
+    <Content Include="Assets\img\icons\silk\email_stop.png" />
+    <Content Include="Assets\img\icons\silk\email_transfer.png" />
+    <Content Include="Assets\img\icons\silk\emoticon_evilgrin.png" />
+    <Content Include="Assets\img\icons\silk\emoticon_grin.png" />
+    <Content Include="Assets\img\icons\silk\emoticon_happy.png" />
+    <Content Include="Assets\img\icons\silk\emoticon_smile.png" />
+    <Content Include="Assets\img\icons\silk\emoticon_surprised.png" />
+    <Content Include="Assets\img\icons\silk\emoticon_tongue.png" />
+    <Content Include="Assets\img\icons\silk\emoticon_unhappy.png" />
+    <Content Include="Assets\img\icons\silk\emoticon_waii.png" />
+    <Content Include="Assets\img\icons\silk\emoticon_wink.png" />
+    <Content Include="Assets\img\icons\silk\erase.png" />
+    <Content Include="Assets\img\icons\silk\error.png" />
+    <Content Include="Assets\img\icons\silk\error_add.png" />
+    <Content Include="Assets\img\icons\silk\error_delete.png" />
+    <Content Include="Assets\img\icons\silk\error_go.png" />
+    <Content Include="Assets\img\icons\silk\exclamation.png" />
+    <Content Include="Assets\img\icons\silk\eye.png" />
+    <Content Include="Assets\img\icons\silk\eyes.png" />
+    <Content Include="Assets\img\icons\silk\feed.png" />
+    <Content Include="Assets\img\icons\silk\feed_add.png" />
+    <Content Include="Assets\img\icons\silk\feed_delete.png" />
+    <Content Include="Assets\img\icons\silk\feed_disk.png" />
+    <Content Include="Assets\img\icons\silk\feed_edit.png" />
+    <Content Include="Assets\img\icons\silk\feed_error.png" />
+    <Content Include="Assets\img\icons\silk\feed_go.png" />
+    <Content Include="Assets\img\icons\silk\feed_key.png" />
+    <Content Include="Assets\img\icons\silk\feed_link.png" />
+    <Content Include="Assets\img\icons\silk\feed_magnify.png" />
+    <Content Include="Assets\img\icons\silk\feed_star.png" />
+    <Content Include="Assets\img\icons\silk\female.png" />
+    <Content Include="Assets\img\icons\silk\film.png" />
+    <Content Include="Assets\img\icons\silk\film_add.png" />
+    <Content Include="Assets\img\icons\silk\film_delete.png" />
+    <Content Include="Assets\img\icons\silk\film_edit.png" />
+    <Content Include="Assets\img\icons\silk\film_eject.png" />
+    <Content Include="Assets\img\icons\silk\film_error.png" />
+    <Content Include="Assets\img\icons\silk\film_go.png" />
+    <Content Include="Assets\img\icons\silk\film_key.png" />
+    <Content Include="Assets\img\icons\silk\film_link.png" />
+    <Content Include="Assets\img\icons\silk\film_magnify.png" />
+    <Content Include="Assets\img\icons\silk\film_save.png" />
+    <Content Include="Assets\img\icons\silk\film_star.png" />
+    <Content Include="Assets\img\icons\silk\film_start.png" />
+    <Content Include="Assets\img\icons\silk\film_stop.png" />
+    <Content Include="Assets\img\icons\silk\find.png" />
+    <Content Include="Assets\img\icons\silk\finger_point.png" />
+    <Content Include="Assets\img\icons\silk\flag_black.png" />
+    <Content Include="Assets\img\icons\silk\flag_blue.png" />
+    <Content Include="Assets\img\icons\silk\flag_checked.png" />
+    <Content Include="Assets\img\icons\silk\flag_france.png" />
+    <Content Include="Assets\img\icons\silk\flag_green.png" />
+    <Content Include="Assets\img\icons\silk\flag_grey.png" />
+    <Content Include="Assets\img\icons\silk\flag_orange.png" />
+    <Content Include="Assets\img\icons\silk\flag_pink.png" />
+    <Content Include="Assets\img\icons\silk\flag_purple.png" />
+    <Content Include="Assets\img\icons\silk\flag_red.png" />
+    <Content Include="Assets\img\icons\silk\flag_white.png" />
+    <Content Include="Assets\img\icons\silk\flag_yellow.png" />
+    <Content Include="Assets\img\icons\silk\flower_daisy.png" />
+    <Content Include="Assets\img\icons\silk\folder.png" />
+    <Content Include="Assets\img\icons\silk\folder_add.png" />
+    <Content Include="Assets\img\icons\silk\folder_bell.png" />
+    <Content Include="Assets\img\icons\silk\folder_bookmark.png" />
+    <Content Include="Assets\img\icons\silk\folder_brick.png" />
+    <Content Include="Assets\img\icons\silk\folder_bug.png" />
+    <Content Include="Assets\img\icons\silk\folder_camera.png" />
+    <Content Include="Assets\img\icons\silk\folder_connect.png" />
+    <Content Include="Assets\img\icons\silk\folder_database.png" />
+    <Content Include="Assets\img\icons\silk\folder_delete.png" />
+    <Content Include="Assets\img\icons\silk\folder_edit.png" />
+    <Content Include="Assets\img\icons\silk\folder_error.png" />
+    <Content Include="Assets\img\icons\silk\folder_explore.png" />
+    <Content Include="Assets\img\icons\silk\folder_feed.png" />
+    <Content Include="Assets\img\icons\silk\folder_film.png" />
+    <Content Include="Assets\img\icons\silk\folder_find.png" />
+    <Content Include="Assets\img\icons\silk\folder_font.png" />
+    <Content Include="Assets\img\icons\silk\folder_go.png" />
+    <Content Include="Assets\img\icons\silk\folder_heart.png" />
+    <Content Include="Assets\img\icons\silk\folder_home.png" />
+    <Content Include="Assets\img\icons\silk\folder_image.png" />
+    <Content Include="Assets\img\icons\silk\folder_key.png" />
+    <Content Include="Assets\img\icons\silk\folder_lightbulb.png" />
+    <Content Include="Assets\img\icons\silk\folder_link.png" />
+    <Content Include="Assets\img\icons\silk\folder_magnify.png" />
+    <Content Include="Assets\img\icons\silk\folder_page.png" />
+    <Content Include="Assets\img\icons\silk\folder_page_white.png" />
+    <Content Include="Assets\img\icons\silk\folder_palette.png" />
+    <Content Include="Assets\img\icons\silk\folder_picture.png" />
+    <Content Include="Assets\img\icons\silk\folder_star.png" />
+    <Content Include="Assets\img\icons\silk\folder_table.png" />
+    <Content Include="Assets\img\icons\silk\folder_up.png" />
+    <Content Include="Assets\img\icons\silk\folder_user.png" />
+    <Content Include="Assets\img\icons\silk\folder_wrench.png" />
+    <Content Include="Assets\img\icons\silk\font.png" />
+    <Content Include="Assets\img\icons\silk\font_add.png" />
+    <Content Include="Assets\img\icons\silk\font_color.png" />
+    <Content Include="Assets\img\icons\silk\font_delete.png" />
+    <Content Include="Assets\img\icons\silk\font_go.png" />
+    <Content Include="Assets\img\icons\silk\font_larger.png" />
+    <Content Include="Assets\img\icons\silk\font_smaller.png" />
+    <Content Include="Assets\img\icons\silk\forward_blue.png" />
+    <Content Include="Assets\img\icons\silk\forward_green.png" />
+    <Content Include="Assets\img\icons\silk\group.png" />
+    <Content Include="Assets\img\icons\silk\group_add.png" />
+    <Content Include="Assets\img\icons\silk\group_delete.png" />
+    <Content Include="Assets\img\icons\silk\group_edit.png" />
+    <Content Include="Assets\img\icons\silk\group_error.png" />
+    <Content Include="Assets\img\icons\silk\group_gear.png" />
+    <Content Include="Assets\img\icons\silk\group_go.png" />
+    <Content Include="Assets\img\icons\silk\group_key.png" />
+    <Content Include="Assets\img\icons\silk\group_link.png" />
+    <Content Include="Assets\img\icons\silk\heart.png" />
+    <Content Include="Assets\img\icons\silk\heart_add.png" />
+    <Content Include="Assets\img\icons\silk\heart_broken.png" />
+    <Content Include="Assets\img\icons\silk\heart_connect.png" />
+    <Content Include="Assets\img\icons\silk\heart_delete.png" />
+    <Content Include="Assets\img\icons\silk\help.png" />
+    <Content Include="Assets\img\icons\silk\hourglass.png" />
+    <Content Include="Assets\img\icons\silk\hourglass_add.png" />
+    <Content Include="Assets\img\icons\silk\hourglass_delete.png" />
+    <Content Include="Assets\img\icons\silk\hourglass_go.png" />
+    <Content Include="Assets\img\icons\silk\hourglass_link.png" />
+    <Content Include="Assets\img\icons\silk\house.png" />
+    <Content Include="Assets\img\icons\silk\house_connect.png" />
+    <Content Include="Assets\img\icons\silk\house_go.png" />
+    <Content Include="Assets\img\icons\silk\house_key.png" />
+    <Content Include="Assets\img\icons\silk\house_link.png" />
+    <Content Include="Assets\img\icons\silk\house_star.png" />
+    <Content Include="Assets\img\icons\silk\html.png" />
+    <Content Include="Assets\img\icons\silk\html_add.png" />
+    <Content Include="Assets\img\icons\silk\html_delete.png" />
+    <Content Include="Assets\img\icons\silk\html_error.png" />
+    <Content Include="Assets\img\icons\silk\html_go.png" />
+    <Content Include="Assets\img\icons\silk\html_valid.png" />
+    <Content Include="Assets\img\icons\silk\image.png" />
+    <Content Include="Assets\img\icons\silk\images.png" />
+    <Content Include="Assets\img\icons\silk\image_add.png" />
+    <Content Include="Assets\img\icons\silk\image_delete.png" />
+    <Content Include="Assets\img\icons\silk\image_edit.png" />
+    <Content Include="Assets\img\icons\silk\image_link.png" />
+    <Content Include="Assets\img\icons\silk\image_magnify.png" />
+    <Content Include="Assets\img\icons\silk\image_star.png" />
+    <Content Include="Assets\img\icons\silk\information.png" />
+    <Content Include="Assets\img\icons\silk\ipod.png" />
+    <Content Include="Assets\img\icons\silk\ipod_cast.png" />
+    <Content Include="Assets\img\icons\silk\ipod_cast_add.png" />
+    <Content Include="Assets\img\icons\silk\ipod_cast_delete.png" />
+    <Content Include="Assets\img\icons\silk\ipod_connect.png" />
+    <Content Include="Assets\img\icons\silk\ipod_nano.png" />
+    <Content Include="Assets\img\icons\silk\ipod_nano_connect.png" />
+    <Content Include="Assets\img\icons\silk\ipod_sound.png" />
+    <Content Include="Assets\img\icons\silk\joystick.png" />
+    <Content Include="Assets\img\icons\silk\joystick_add.png" />
+    <Content Include="Assets\img\icons\silk\joystick_connect.png" />
+    <Content Include="Assets\img\icons\silk\joystick_delete.png" />
+    <Content Include="Assets\img\icons\silk\joystick_error.png" />
+    <Content Include="Assets\img\icons\silk\key.png" />
+    <Content Include="Assets\img\icons\silk\keyboard.png" />
+    <Content Include="Assets\img\icons\silk\keyboard_add.png" />
+    <Content Include="Assets\img\icons\silk\keyboard_connect.png" />
+    <Content Include="Assets\img\icons\silk\keyboard_delete.png" />
+    <Content Include="Assets\img\icons\silk\keyboard_magnify.png" />
+    <Content Include="Assets\img\icons\silk\key_add.png" />
+    <Content Include="Assets\img\icons\silk\key_delete.png" />
+    <Content Include="Assets\img\icons\silk\key_go.png" />
+    <Content Include="Assets\img\icons\silk\key_start.png" />
+    <Content Include="Assets\img\icons\silk\key_stop.png" />
+    <Content Include="Assets\img\icons\silk\laptop.png" />
+    <Content Include="Assets\img\icons\silk\laptop_add.png" />
+    <Content Include="Assets\img\icons\silk\laptop_connect.png" />
+    <Content Include="Assets\img\icons\silk\laptop_delete.png" />
+    <Content Include="Assets\img\icons\silk\laptop_disk.png" />
+    <Content Include="Assets\img\icons\silk\laptop_edit.png" />
+    <Content Include="Assets\img\icons\silk\laptop_error.png" />
+    <Content Include="Assets\img\icons\silk\laptop_go.png" />
+    <Content Include="Assets\img\icons\silk\laptop_key.png" />
+    <Content Include="Assets\img\icons\silk\laptop_link.png" />
+    <Content Include="Assets\img\icons\silk\laptop_magnify.png" />
+    <Content Include="Assets\img\icons\silk\laptop_start.png" />
+    <Content Include="Assets\img\icons\silk\laptop_stop.png" />
+    <Content Include="Assets\img\icons\silk\laptop_wrench.png" />
+    <Content Include="Assets\img\icons\silk\layers.png" />
+    <Content Include="Assets\img\icons\silk\layout.png" />
+    <Content Include="Assets\img\icons\silk\layout_add.png" />
+    <Content Include="Assets\img\icons\silk\layout_content.png" />
+    <Content Include="Assets\img\icons\silk\layout_delete.png" />
+    <Content Include="Assets\img\icons\silk\layout_edit.png" />
+    <Content Include="Assets\img\icons\silk\layout_error.png" />
+    <Content Include="Assets\img\icons\silk\layout_header.png" />
+    <Content Include="Assets\img\icons\silk\layout_key.png" />
+    <Content Include="Assets\img\icons\silk\layout_lightning.png" />
+    <Content Include="Assets\img\icons\silk\layout_link.png" />
+    <Content Include="Assets\img\icons\silk\layout_sidebar.png" />
+    <Content Include="Assets\img\icons\silk\lightbulb.png" />
+    <Content Include="Assets\img\icons\silk\lightbulb_add.png" />
+    <Content Include="Assets\img\icons\silk\lightbulb_delete.png" />
+    <Content Include="Assets\img\icons\silk\lightbulb_off.png" />
+    <Content Include="Assets\img\icons\silk\lightning.png" />
+    <Content Include="Assets\img\icons\silk\lightning_add.png" />
+    <Content Include="Assets\img\icons\silk\lightning_delete.png" />
+    <Content Include="Assets\img\icons\silk\lightning_go.png" />
+    <Content Include="Assets\img\icons\silk\link.png" />
+    <Content Include="Assets\img\icons\silk\link_add.png" />
+    <Content Include="Assets\img\icons\silk\link_break.png" />
+    <Content Include="Assets\img\icons\silk\link_delete.png" />
+    <Content Include="Assets\img\icons\silk\link_edit.png" />
+    <Content Include="Assets\img\icons\silk\link_error.png" />
+    <Content Include="Assets\img\icons\silk\link_go.png" />
+    <Content Include="Assets\img\icons\silk\lock.png" />
+    <Content Include="Assets\img\icons\silk\lock_add.png" />
+    <Content Include="Assets\img\icons\silk\lock_break.png" />
+    <Content Include="Assets\img\icons\silk\lock_delete.png" />
+    <Content Include="Assets\img\icons\silk\lock_edit.png" />
+    <Content Include="Assets\img\icons\silk\lock_go.png" />
+    <Content Include="Assets\img\icons\silk\lock_key.png" />
+    <Content Include="Assets\img\icons\silk\lock_open.png" />
+    <Content Include="Assets\img\icons\silk\lock_start.png" />
+    <Content Include="Assets\img\icons\silk\lock_stop.png" />
+    <Content Include="Assets\img\icons\silk\lorry.png" />
+    <Content Include="Assets\img\icons\silk\lorry_add.png" />
+    <Content Include="Assets\img\icons\silk\lorry_delete.png" />
+    <Content Include="Assets\img\icons\silk\lorry_error.png" />
+    <Content Include="Assets\img\icons\silk\lorry_flatbed.png" />
+    <Content Include="Assets\img\icons\silk\lorry_go.png" />
+    <Content Include="Assets\img\icons\silk\lorry_link.png" />
+    <Content Include="Assets\img\icons\silk\lorry_start.png" />
+    <Content Include="Assets\img\icons\silk\lorry_stop.png" />
+    <Content Include="Assets\img\icons\silk\magifier_zoom_out.png" />
+    <Content Include="Assets\img\icons\silk\magnifier.png" />
+    <Content Include="Assets\img\icons\silk\magnifier_zoom_in.png" />
+    <Content Include="Assets\img\icons\silk\mail.png" />
+    <Content Include="Assets\img\icons\silk\male.png" />
+    <Content Include="Assets\img\icons\silk\map.png" />
+    <Content Include="Assets\img\icons\silk\map_add.png" />
+    <Content Include="Assets\img\icons\silk\map_clipboard.png" />
+    <Content Include="Assets\img\icons\silk\map_cursor.png" />
+    <Content Include="Assets\img\icons\silk\map_delete.png" />
+    <Content Include="Assets\img\icons\silk\map_edit.png" />
+    <Content Include="Assets\img\icons\silk\map_error.png" />
+    <Content Include="Assets\img\icons\silk\map_go.png" />
+    <Content Include="Assets\img\icons\silk\map_link.png" />
+    <Content Include="Assets\img\icons\silk\map_magnify.png" />
+    <Content Include="Assets\img\icons\silk\map_start.png" />
+    <Content Include="Assets\img\icons\silk\map_stop.png" />
+    <Content Include="Assets\img\icons\silk\medal_bronze_1.png" />
+    <Content Include="Assets\img\icons\silk\medal_bronze_2.png" />
+    <Content Include="Assets\img\icons\silk\medal_bronze_3.png" />
+    <Content Include="Assets\img\icons\silk\medal_bronze_add.png" />
+    <Content Include="Assets\img\icons\silk\medal_bronze_delete.png" />
+    <Content Include="Assets\img\icons\silk\medal_gold_1.png" />
+    <Content Include="Assets\img\icons\silk\medal_gold_2.png" />
+    <Content Include="Assets\img\icons\silk\medal_gold_3.png" />
+    <Content Include="Assets\img\icons\silk\medal_gold_add.png" />
+    <Content Include="Assets\img\icons\silk\medal_gold_delete.png" />
+    <Content Include="Assets\img\icons\silk\medal_silver_1.png" />
+    <Content Include="Assets\img\icons\silk\medal_silver_2.png" />
+    <Content Include="Assets\img\icons\silk\medal_silver_3.png" />
+    <Content Include="Assets\img\icons\silk\medal_silver_add.png" />
+    <Content Include="Assets\img\icons\silk\medal_silver_delete.png" />
+    <Content Include="Assets\img\icons\silk\money.png" />
+    <Content Include="Assets\img\icons\silk\money_add.png" />
+    <Content Include="Assets\img\icons\silk\money_delete.png" />
+    <Content Include="Assets\img\icons\silk\money_dollar.png" />
+    <Content Include="Assets\img\icons\silk\money_euro.png" />
+    <Content Include="Assets\img\icons\silk\money_pound.png" />
+    <Content Include="Assets\img\icons\silk\money_yen.png" />
+    <Content Include="Assets\img\icons\silk\monitor.png" />
+    <Content Include="Assets\img\icons\silk\monitor_add.png" />
+    <Content Include="Assets\img\icons\silk\monitor_delete.png" />
+    <Content Include="Assets\img\icons\silk\monitor_edit.png" />
+    <Content Include="Assets\img\icons\silk\monitor_error.png" />
+    <Content Include="Assets\img\icons\silk\monitor_go.png" />
+    <Content Include="Assets\img\icons\silk\monitor_key.png" />
+    <Content Include="Assets\img\icons\silk\monitor_lightning.png" />
+    <Content Include="Assets\img\icons\silk\monitor_link.png" />
+    <Content Include="Assets\img\icons\silk\moon_full.png" />
+    <Content Include="Assets\img\icons\silk\mouse.png" />
+    <Content Include="Assets\img\icons\silk\mouse_add.png" />
+    <Content Include="Assets\img\icons\silk\mouse_delete.png" />
+    <Content Include="Assets\img\icons\silk\mouse_error.png" />
+    <Content Include="Assets\img\icons\silk\music.png" />
+    <Content Include="Assets\img\icons\silk\music_note.png" />
+    <Content Include="Assets\img\icons\silk\neighbourhood.png" />
+    <Content Include="Assets\img\icons\silk\new.png" />
+    <Content Include="Assets\img\icons\silk\newspaper.png" />
+    <Content Include="Assets\img\icons\silk\newspaper_add.png" />
+    <Content Include="Assets\img\icons\silk\newspaper_delete.png" />
+    <Content Include="Assets\img\icons\silk\newspaper_go.png" />
+    <Content Include="Assets\img\icons\silk\newspaper_link.png" />
+    <Content Include="Assets\img\icons\silk\new_blue.png" />
+    <Content Include="Assets\img\icons\silk\new_red.png" />
+    <Content Include="Assets\img\icons\silk\next-green.png" />
+    <Content Include="Assets\img\icons\silk\next_blue.png" />
+    <Content Include="Assets\img\icons\silk\next_green.png" />
+    <Content Include="Assets\img\icons\silk\note.png" />
+    <Content Include="Assets\img\icons\silk\note_add.png" />
+    <Content Include="Assets\img\icons\silk\note_delete.png" />
+    <Content Include="Assets\img\icons\silk\note_edit.png" />
+    <Content Include="Assets\img\icons\silk\note_error.png" />
+    <Content Include="Assets\img\icons\silk\note_go.png" />
+    <Content Include="Assets\img\icons\silk\outline.png" />
+    <Content Include="Assets\img\icons\silk\overlays.png" />
+    <Content Include="Assets\img\icons\silk\package.png" />
+    <Content Include="Assets\img\icons\silk\package_add.png" />
+    <Content Include="Assets\img\icons\silk\package_delete.png" />
+    <Content Include="Assets\img\icons\silk\package_down.png" />
+    <Content Include="Assets\img\icons\silk\package_go.png" />
+    <Content Include="Assets\img\icons\silk\package_green.png" />
+    <Content Include="Assets\img\icons\silk\package_in.png" />
+    <Content Include="Assets\img\icons\silk\package_link.png" />
+    <Content Include="Assets\img\icons\silk\package_se.png" />
+    <Content Include="Assets\img\icons\silk\package_start.png" />
+    <Content Include="Assets\img\icons\silk\package_stop.png" />
+    <Content Include="Assets\img\icons\silk\package_white.png" />
+    <Content Include="Assets\img\icons\silk\page.png" />
+    <Content Include="Assets\img\icons\silk\page_add.png" />
+    <Content Include="Assets\img\icons\silk\page_attach.png" />
+    <Content Include="Assets\img\icons\silk\page_back.png" />
+    <Content Include="Assets\img\icons\silk\page_break.png" />
+    <Content Include="Assets\img\icons\silk\page_break_insert.png" />
+    <Content Include="Assets\img\icons\silk\page_cancel.png" />
+    <Content Include="Assets\img\icons\silk\page_code.png" />
+    <Content Include="Assets\img\icons\silk\page_copy.png" />
+    <Content Include="Assets\img\icons\silk\page_delete.png" />
+    <Content Include="Assets\img\icons\silk\page_edit.png" />
+    <Content Include="Assets\img\icons\silk\page_error.png" />
+    <Content Include="Assets\img\icons\silk\page_excel.png" />
+    <Content Include="Assets\img\icons\silk\page_find.png" />
+    <Content Include="Assets\img\icons\silk\page_forward.png" />
+    <Content Include="Assets\img\icons\silk\page_gear.png" />
+    <Content Include="Assets\img\icons\silk\page_go.png" />
+    <Content Include="Assets\img\icons\silk\page_green.png" />
+    <Content Include="Assets\img\icons\silk\page_header_footer.png" />
+    <Content Include="Assets\img\icons\silk\page_key.png" />
+    <Content Include="Assets\img\icons\silk\page_landscape.png" />
+    <Content Include="Assets\img\icons\silk\page_landscape_shot.png" />
+    <Content Include="Assets\img\icons\silk\page_lightning.png" />
+    <Content Include="Assets\img\icons\silk\page_link.png" />
+    <Content Include="Assets\img\icons\silk\page_magnify.png" />
+    <Content Include="Assets\img\icons\silk\page_paintbrush.png" />
+    <Content Include="Assets\img\icons\silk\page_paste.png" />
+    <Content Include="Assets\img\icons\silk\page_portrait.png" />
+    <Content Include="Assets\img\icons\silk\page_portrait_shot.png" />
+    <Content Include="Assets\img\icons\silk\page_red.png" />
+    <Content Include="Assets\img\icons\silk\page_refresh.png" />
+    <Content Include="Assets\img\icons\silk\page_save.png" />
+    <Content Include="Assets\img\icons\silk\page_white.png" />
+    <Content Include="Assets\img\icons\silk\page_white_acrobat.png" />
+    <Content Include="Assets\img\icons\silk\page_white_actionscript.png" />
+    <Content Include="Assets\img\icons\silk\page_white_add.png" />
+    <Content Include="Assets\img\icons\silk\page_white_break.png" />
+    <Content Include="Assets\img\icons\silk\page_white_c.png" />
+    <Content Include="Assets\img\icons\silk\page_white_camera.png" />
+    <Content Include="Assets\img\icons\silk\page_white_cd.png" />
+    <Content Include="Assets\img\icons\silk\page_white_cdr.png" />
+    <Content Include="Assets\img\icons\silk\page_white_code.png" />
+    <Content Include="Assets\img\icons\silk\page_white_code_red.png" />
+    <Content Include="Assets\img\icons\silk\page_white_coldfusion.png" />
+    <Content Include="Assets\img\icons\silk\page_white_compressed.png" />
+    <Content Include="Assets\img\icons\silk\page_white_connect.png" />
+    <Content Include="Assets\img\icons\silk\page_white_copy.png" />
+    <Content Include="Assets\img\icons\silk\page_white_cplusplus.png" />
+    <Content Include="Assets\img\icons\silk\page_white_csharp.png" />
+    <Content Include="Assets\img\icons\silk\page_white_cup.png" />
+    <Content Include="Assets\img\icons\silk\page_white_database.png" />
+    <Content Include="Assets\img\icons\silk\page_white_database_yellow.png" />
+    <Content Include="Assets\img\icons\silk\page_white_delete.png" />
+    <Content Include="Assets\img\icons\silk\page_white_dvd.png" />
+    <Content Include="Assets\img\icons\silk\page_white_edit.png" />
+    <Content Include="Assets\img\icons\silk\page_white_error.png" />
+    <Content Include="Assets\img\icons\silk\page_white_excel.png" />
+    <Content Include="Assets\img\icons\silk\page_white_find.png" />
+    <Content Include="Assets\img\icons\silk\page_white_flash.png" />
+    <Content Include="Assets\img\icons\silk\page_white_font.png" />
+    <Content Include="Assets\img\icons\silk\page_white_freehand.png" />
+    <Content Include="Assets\img\icons\silk\page_white_gear.png" />
+    <Content Include="Assets\img\icons\silk\page_white_get.png" />
+    <Content Include="Assets\img\icons\silk\page_white_go.png" />
+    <Content Include="Assets\img\icons\silk\page_white_h.png" />
+    <Content Include="Assets\img\icons\silk\page_white_horizontal.png" />
+    <Content Include="Assets\img\icons\silk\page_white_key.png" />
+    <Content Include="Assets\img\icons\silk\page_white_lightning.png" />
+    <Content Include="Assets\img\icons\silk\page_white_link.png" />
+    <Content Include="Assets\img\icons\silk\page_white_magnify.png" />
+    <Content Include="Assets\img\icons\silk\page_white_medal.png" />
+    <Content Include="Assets\img\icons\silk\page_white_office.png" />
+    <Content Include="Assets\img\icons\silk\page_white_paint.png" />
+    <Content Include="Assets\img\icons\silk\page_white_paintbrush.png" />
+    <Content Include="Assets\img\icons\silk\page_white_paste.png" />
+    <Content Include="Assets\img\icons\silk\page_white_paste_table.png" />
+    <Content Include="Assets\img\icons\silk\page_white_php.png" />
+    <Content Include="Assets\img\icons\silk\page_white_picture.png" />
+    <Content Include="Assets\img\icons\silk\page_white_powerpoint.png" />
+    <Content Include="Assets\img\icons\silk\page_white_put.png" />
+    <Content Include="Assets\img\icons\silk\page_white_refresh.png" />
+    <Content Include="Assets\img\icons\silk\page_white_ruby.png" />
+    <Content Include="Assets\img\icons\silk\page_white_side_by_side.png" />
+    <Content Include="Assets\img\icons\silk\page_white_stack.png" />
+    <Content Include="Assets\img\icons\silk\page_white_star.png" />
+    <Content Include="Assets\img\icons\silk\page_white_swoosh.png" />
+    <Content Include="Assets\img\icons\silk\page_white_text.png" />
+    <Content Include="Assets\img\icons\silk\page_white_text_width.png" />
+    <Content Include="Assets\img\icons\silk\page_white_tux.png" />
+    <Content Include="Assets\img\icons\silk\page_white_vector.png" />
+    <Content Include="Assets\img\icons\silk\page_white_visualstudio.png" />
+    <Content Include="Assets\img\icons\silk\page_white_width.png" />
+    <Content Include="Assets\img\icons\silk\page_white_word.png" />
+    <Content Include="Assets\img\icons\silk\page_white_world.png" />
+    <Content Include="Assets\img\icons\silk\page_white_wrench.png" />
+    <Content Include="Assets\img\icons\silk\page_white_zip.png" />
+    <Content Include="Assets\img\icons\silk\page_word.png" />
+    <Content Include="Assets\img\icons\silk\page_world.png" />
+    <Content Include="Assets\img\icons\silk\paint.png" />
+    <Content Include="Assets\img\icons\silk\paintbrush.png" />
+    <Content Include="Assets\img\icons\silk\paintbrush_color.png" />
+    <Content Include="Assets\img\icons\silk\paintcan.png" />
+    <Content Include="Assets\img\icons\silk\paintcan_red.png" />
+    <Content Include="Assets\img\icons\silk\paint_can_brush.png" />
+    <Content Include="Assets\img\icons\silk\palette.png" />
+    <Content Include="Assets\img\icons\silk\paste_plain.png" />
+    <Content Include="Assets\img\icons\silk\paste_word.png" />
+    <Content Include="Assets\img\icons\silk\pause_blue.png" />
+    <Content Include="Assets\img\icons\silk\pause_green.png" />
+    <Content Include="Assets\img\icons\silk\pause_record.png" />
+    <Content Include="Assets\img\icons\silk\pencil.png" />
+    <Content Include="Assets\img\icons\silk\pencil_add.png" />
+    <Content Include="Assets\img\icons\silk\pencil_delete.png" />
+    <Content Include="Assets\img\icons\silk\pencil_go.png" />
+    <Content Include="Assets\img\icons\silk\phone.png" />
+    <Content Include="Assets\img\icons\silk\phone_add.png" />
+    <Content Include="Assets\img\icons\silk\phone_delete.png" />
+    <Content Include="Assets\img\icons\silk\phone_edit.png" />
+    <Content Include="Assets\img\icons\silk\phone_error.png" />
+    <Content Include="Assets\img\icons\silk\phone_go.png" />
+    <Content Include="Assets\img\icons\silk\phone_key.png" />
+    <Content Include="Assets\img\icons\silk\phone_link.png" />
+    <Content Include="Assets\img\icons\silk\phone_sound.png" />
+    <Content Include="Assets\img\icons\silk\phone_start.png" />
+    <Content Include="Assets\img\icons\silk\phone_stop.png" />
+    <Content Include="Assets\img\icons\silk\photo.png" />
+    <Content Include="Assets\img\icons\silk\photos.png" />
+    <Content Include="Assets\img\icons\silk\photo_add.png" />
+    <Content Include="Assets\img\icons\silk\photo_delete.png" />
+    <Content Include="Assets\img\icons\silk\photo_edit.png" />
+    <Content Include="Assets\img\icons\silk\photo_link.png" />
+    <Content Include="Assets\img\icons\silk\photo_paint.png" />
+    <Content Include="Assets\img\icons\silk\picture.png" />
+    <Content Include="Assets\img\icons\silk\pictures.png" />
+    <Content Include="Assets\img\icons\silk\pictures_thumbs.png" />
+    <Content Include="Assets\img\icons\silk\picture_add.png" />
+    <Content Include="Assets\img\icons\silk\picture_clipboard.png" />
+    <Content Include="Assets\img\icons\silk\picture_delete.png" />
+    <Content Include="Assets\img\icons\silk\picture_edit.png" />
+    <Content Include="Assets\img\icons\silk\picture_empty.png" />
+    <Content Include="Assets\img\icons\silk\picture_error.png" />
+    <Content Include="Assets\img\icons\silk\picture_go.png" />
+    <Content Include="Assets\img\icons\silk\picture_key.png" />
+    <Content Include="Assets\img\icons\silk\picture_link.png" />
+    <Content Include="Assets\img\icons\silk\picture_save.png" />
+    <Content Include="Assets\img\icons\silk\pilcrow.png" />
+    <Content Include="Assets\img\icons\silk\pill.png" />
+    <Content Include="Assets\img\icons\silk\pill_add.png" />
+    <Content Include="Assets\img\icons\silk\pill_delete.png" />
+    <Content Include="Assets\img\icons\silk\pill_error.png" />
+    <Content Include="Assets\img\icons\silk\pill_go.png" />
+    <Content Include="Assets\img\icons\silk\play_blue.png" />
+    <Content Include="Assets\img\icons\silk\play_green.png" />
+    <Content Include="Assets\img\icons\silk\plugin.png" />
+    <Content Include="Assets\img\icons\silk\plugin_add.png" />
+    <Content Include="Assets\img\icons\silk\plugin_delete.png" />
+    <Content Include="Assets\img\icons\silk\plugin_disabled.png" />
+    <Content Include="Assets\img\icons\silk\plugin_edit.png" />
+    <Content Include="Assets\img\icons\silk\plugin_error.png" />
+    <Content Include="Assets\img\icons\silk\plugin_go.png" />
+    <Content Include="Assets\img\icons\silk\plugin_key.png" />
+    <Content Include="Assets\img\icons\silk\plugin_link.png" />
+    <Content Include="Assets\img\icons\silk\previous-green.png" />
+    <Content Include="Assets\img\icons\silk\printer.png" />
+    <Content Include="Assets\img\icons\silk\printer_add.png" />
+    <Content Include="Assets\img\icons\silk\printer_cancel.png" />
+    <Content Include="Assets\img\icons\silk\printer_color.png" />
+    <Content Include="Assets\img\icons\silk\printer_connect.png" />
+    <Content Include="Assets\img\icons\silk\printer_delete.png" />
+    <Content Include="Assets\img\icons\silk\printer_empty.png" />
+    <Content Include="Assets\img\icons\silk\printer_error.png" />
+    <Content Include="Assets\img\icons\silk\printer_go.png" />
+    <Content Include="Assets\img\icons\silk\printer_key.png" />
+    <Content Include="Assets\img\icons\silk\printer_mono.png" />
+    <Content Include="Assets\img\icons\silk\printer_start.png" />
+    <Content Include="Assets\img\icons\silk\printer_stop.png" />
+    <Content Include="Assets\img\icons\silk\rainbow.png" />
+    <Content Include="Assets\img\icons\silk\rainbow_star.png" />
+    <Content Include="Assets\img\icons\silk\record_blue.png" />
+    <Content Include="Assets\img\icons\silk\record_green.png" />
+    <Content Include="Assets\img\icons\silk\record_red.png" />
+    <Content Include="Assets\img\icons\silk\reload.png" />
+    <Content Include="Assets\img\icons\silk\report.png" />
+    <Content Include="Assets\img\icons\silk\report_add.png" />
+    <Content Include="Assets\img\icons\silk\report_delete.png" />
+    <Content Include="Assets\img\icons\silk\report_disk.png" />
+    <Content Include="Assets\img\icons\silk\report_edit.png" />
+    <Content Include="Assets\img\icons\silk\report_go.png" />
+    <Content Include="Assets\img\icons\silk\report_key.png" />
+    <Content Include="Assets\img\icons\silk\report_link.png" />
+    <Content Include="Assets\img\icons\silk\report_magnify.png" />
+    <Content Include="Assets\img\icons\silk\report_picture.png" />
+    <Content Include="Assets\img\icons\silk\report_start.png" />
+    <Content Include="Assets\img\icons\silk\report_stop.png" />
+    <Content Include="Assets\img\icons\silk\report_user.png" />
+    <Content Include="Assets\img\icons\silk\report_word.png" />
+    <Content Include="Assets\img\icons\silk\resultset_first.png" />
+    <Content Include="Assets\img\icons\silk\resultset_last.png" />
+    <Content Include="Assets\img\icons\silk\resultset_next.png" />
+    <Content Include="Assets\img\icons\silk\resultset_previous.png" />
+    <Content Include="Assets\img\icons\silk\reverse_blue.png" />
+    <Content Include="Assets\img\icons\silk\reverse_green.png" />
+    <Content Include="Assets\img\icons\silk\rewind_blue.png" />
+    <Content Include="Assets\img\icons\silk\rewind_green.png" />
+    <Content Include="Assets\img\icons\silk\rgb.png" />
+    <Content Include="Assets\img\icons\silk\rosette.png" />
+    <Content Include="Assets\img\icons\silk\rosette_blue.png" />
+    <Content Include="Assets\img\icons\silk\rss.png" />
+    <Content Include="Assets\img\icons\silk\rss_add.png" />
+    <Content Include="Assets\img\icons\silk\rss_delete.png" />
+    <Content Include="Assets\img\icons\silk\rss_error.png" />
+    <Content Include="Assets\img\icons\silk\rss_go.png" />
+    <Content Include="Assets\img\icons\silk\rss_valid.png" />
+    <Content Include="Assets\img\icons\silk\ruby.png" />
+    <Content Include="Assets\img\icons\silk\ruby_add.png" />
+    <Content Include="Assets\img\icons\silk\ruby_delete.png" />
+    <Content Include="Assets\img\icons\silk\ruby_gear.png" />
+    <Content Include="Assets\img\icons\silk\ruby_get.png" />
+    <Content Include="Assets\img\icons\silk\ruby_go.png" />
+    <Content Include="Assets\img\icons\silk\ruby_key.png" />
+    <Content Include="Assets\img\icons\silk\ruby_link.png" />
+    <Content Include="Assets\img\icons\silk\ruby_put.png" />
+    <Content Include="Assets\img\icons\silk\script.png" />
+    <Content Include="Assets\img\icons\silk\script_add.png" />
+    <Content Include="Assets\img\icons\silk\script_code.png" />
+    <Content Include="Assets\img\icons\silk\script_code_red.png" />
+    <Content Include="Assets\img\icons\silk\script_delete.png" />
+    <Content Include="Assets\img\icons\silk\script_edit.png" />
+    <Content Include="Assets\img\icons\silk\script_error.png" />
+    <Content Include="Assets\img\icons\silk\script_gear.png" />
+    <Content Include="Assets\img\icons\silk\script_go.png" />
+    <Content Include="Assets\img\icons\silk\script_key.png" />
+    <Content Include="Assets\img\icons\silk\script_lightning.png" />
+    <Content Include="Assets\img\icons\silk\script_link.png" />
+    <Content Include="Assets\img\icons\silk\script_palette.png" />
+    <Content Include="Assets\img\icons\silk\script_save.png" />
+    <Content Include="Assets\img\icons\silk\script_start.png" />
+    <Content Include="Assets\img\icons\silk\script_stop.png" />
+    <Content Include="Assets\img\icons\silk\seasons.png" />
+    <Content Include="Assets\img\icons\silk\section_collapsed.png" />
+    <Content Include="Assets\img\icons\silk\section_expanded.png" />
+    <Content Include="Assets\img\icons\silk\server.png" />
+    <Content Include="Assets\img\icons\silk\server_add.png" />
+    <Content Include="Assets\img\icons\silk\server_chart.png" />
+    <Content Include="Assets\img\icons\silk\server_compressed.png" />
+    <Content Include="Assets\img\icons\silk\server_connect.png" />
+    <Content Include="Assets\img\icons\silk\server_database.png" />
+    <Content Include="Assets\img\icons\silk\server_delete.png" />
+    <Content Include="Assets\img\icons\silk\server_edit.png" />
+    <Content Include="Assets\img\icons\silk\server_error.png" />
+    <Content Include="Assets\img\icons\silk\server_go.png" />
+    <Content Include="Assets\img\icons\silk\server_key.png" />
+    <Content Include="Assets\img\icons\silk\server_lightning.png" />
+    <Content Include="Assets\img\icons\silk\server_link.png" />
+    <Content Include="Assets\img\icons\silk\server_start.png" />
+    <Content Include="Assets\img\icons\silk\server_stop.png" />
+    <Content Include="Assets\img\icons\silk\server_uncompressed.png" />
+    <Content Include="Assets\img\icons\silk\server_wrench.png" />
+    <Content Include="Assets\img\icons\silk\shading.png" />
+    <Content Include="Assets\img\icons\silk\shapes_many.png" />
+    <Content Include="Assets\img\icons\silk\shapes_many_select.png" />
+    <Content Include="Assets\img\icons\silk\shape_3d.png" />
+    <Content Include="Assets\img\icons\silk\shape_align_bottom.png" />
+    <Content Include="Assets\img\icons\silk\shape_align_center.png" />
+    <Content Include="Assets\img\icons\silk\shape_align_left.png" />
+    <Content Include="Assets\img\icons\silk\shape_align_middle.png" />
+    <Content Include="Assets\img\icons\silk\shape_align_right.png" />
+    <Content Include="Assets\img\icons\silk\shape_align_top.png" />
+    <Content Include="Assets\img\icons\silk\shape_flip_horizontal.png" />
+    <Content Include="Assets\img\icons\silk\shape_flip_vertical.png" />
+    <Content Include="Assets\img\icons\silk\shape_group.png" />
+    <Content Include="Assets\img\icons\silk\shape_handles.png" />
+    <Content Include="Assets\img\icons\silk\shape_move_back.png" />
+    <Content Include="Assets\img\icons\silk\shape_move_backwards.png" />
+    <Content Include="Assets\img\icons\silk\shape_move_forwards.png" />
+    <Content Include="Assets\img\icons\silk\shape_move_front.png" />
+    <Content Include="Assets\img\icons\silk\shape_rotate_anticlockwise.png" />
+    <Content Include="Assets\img\icons\silk\shape_rotate_clockwise.png" />
+    <Content Include="Assets\img\icons\silk\shape_shade_a.png" />
+    <Content Include="Assets\img\icons\silk\shape_shade_b.png" />
+    <Content Include="Assets\img\icons\silk\shape_shade_c.png" />
+    <Content Include="Assets\img\icons\silk\shape_shadow.png" />
+    <Content Include="Assets\img\icons\silk\shape_shadow_toggle.png" />
+    <Content Include="Assets\img\icons\silk\shape_square.png" />
+    <Content Include="Assets\img\icons\silk\shape_square_add.png" />
+    <Content Include="Assets\img\icons\silk\shape_square_delete.png" />
+    <Content Include="Assets\img\icons\silk\shape_square_edit.png" />
+    <Content Include="Assets\img\icons\silk\shape_square_error.png" />
+    <Content Include="Assets\img\icons\silk\shape_square_go.png" />
+    <Content Include="Assets\img\icons\silk\shape_square_key.png" />
+    <Content Include="Assets\img\icons\silk\shape_square_link.png" />
+    <Content Include="Assets\img\icons\silk\shape_square_select.png" />
+    <Content Include="Assets\img\icons\silk\shape_ungroup.png" />
+    <Content Include="Assets\img\icons\silk\share.png" />
+    <Content Include="Assets\img\icons\silk\shield.png" />
+    <Content Include="Assets\img\icons\silk\shield_add.png" />
+    <Content Include="Assets\img\icons\silk\shield_delete.png" />
+    <Content Include="Assets\img\icons\silk\shield_error.png" />
+    <Content Include="Assets\img\icons\silk\shield_go.png" />
+    <Content Include="Assets\img\icons\silk\shield_rainbow.png" />
+    <Content Include="Assets\img\icons\silk\shield_silver.png" />
+    <Content Include="Assets\img\icons\silk\shield_start.png" />
+    <Content Include="Assets\img\icons\silk\shield_stop.png" />
+    <Content Include="Assets\img\icons\silk\sitemap.png" />
+    <Content Include="Assets\img\icons\silk\sitemap_color.png" />
+    <Content Include="Assets\img\icons\silk\smartphone.png" />
+    <Content Include="Assets\img\icons\silk\smartphone_add.png" />
+    <Content Include="Assets\img\icons\silk\smartphone_connect.png" />
+    <Content Include="Assets\img\icons\silk\smartphone_delete.png" />
+    <Content Include="Assets\img\icons\silk\smartphone_disk.png" />
+    <Content Include="Assets\img\icons\silk\smartphone_edit.png" />
+    <Content Include="Assets\img\icons\silk\smartphone_error.png" />
+    <Content Include="Assets\img\icons\silk\smartphone_go.png" />
+    <Content Include="Assets\img\icons\silk\smartphone_key.png" />
+    <Content Include="Assets\img\icons\silk\smartphone_wrench.png" />
+    <Content Include="Assets\img\icons\silk\sort_ascending.png" />
+    <Content Include="Assets\img\icons\silk\sort_descending.png" />
+    <Content Include="Assets\img\icons\silk\sound.png" />
+    <Content Include="Assets\img\icons\silk\sound_add.png" />
+    <Content Include="Assets\img\icons\silk\sound_delete.png" />
+    <Content Include="Assets\img\icons\silk\sound_high.png" />
+    <Content Include="Assets\img\icons\silk\sound_in.png" />
+    <Content Include="Assets\img\icons\silk\sound_low.png" />
+    <Content Include="Assets\img\icons\silk\sound_mute.png" />
+    <Content Include="Assets\img\icons\silk\sound_none.png" />
+    <Content Include="Assets\img\icons\silk\sound_out.png" />
+    <Content Include="Assets\img\icons\silk\spellcheck.png" />
+    <Content Include="Assets\img\icons\silk\sport_8ball.png" />
+    <Content Include="Assets\img\icons\silk\sport_basketball.png" />
+    <Content Include="Assets\img\icons\silk\sport_football.png" />
+    <Content Include="Assets\img\icons\silk\sport_golf.png" />
+    <Content Include="Assets\img\icons\silk\sport_golf_practice.png" />
+    <Content Include="Assets\img\icons\silk\sport_raquet.png" />
+    <Content Include="Assets\img\icons\silk\sport_shuttlecock.png" />
+    <Content Include="Assets\img\icons\silk\sport_soccer.png" />
+    <Content Include="Assets\img\icons\silk\sport_tennis.png" />
+    <Content Include="Assets\img\icons\silk\star.png" />
+    <Content Include="Assets\img\icons\silk\star_bronze.png" />
+    <Content Include="Assets\img\icons\silk\star_bronze_half_grey.png" />
+    <Content Include="Assets\img\icons\silk\star_gold.png" />
+    <Content Include="Assets\img\icons\silk\star_gold_half_grey.png" />
+    <Content Include="Assets\img\icons\silk\star_gold_half_silver.png" />
+    <Content Include="Assets\img\icons\silk\star_grey.png" />
+    <Content Include="Assets\img\icons\silk\star_half_grey.png" />
+    <Content Include="Assets\img\icons\silk\star_silver.png" />
+    <Content Include="Assets\img\icons\silk\status_away.png" />
+    <Content Include="Assets\img\icons\silk\status_be_right_back.png" />
+    <Content Include="Assets\img\icons\silk\status_busy.png" />
+    <Content Include="Assets\img\icons\silk\status_invisible.png" />
+    <Content Include="Assets\img\icons\silk\status_offline.png" />
+    <Content Include="Assets\img\icons\silk\status_online.png" />
+    <Content Include="Assets\img\icons\silk\stop.png" />
+    <Content Include="Assets\img\icons\silk\stop_blue.png" />
+    <Content Include="Assets\img\icons\silk\stop_green.png" />
+    <Content Include="Assets\img\icons\silk\stop_red.png" />
+    <Content Include="Assets\img\icons\silk\style.png" />
+    <Content Include="Assets\img\icons\silk\style_add.png" />
+    <Content Include="Assets\img\icons\silk\style_delete.png" />
+    <Content Include="Assets\img\icons\silk\style_edit.png" />
+    <Content Include="Assets\img\icons\silk\style_go.png" />
+    <Content Include="Assets\img\icons\silk\sum.png" />
+    <Content Include="Assets\img\icons\silk\tab.png" />
+    <Content Include="Assets\img\icons\silk\table.png" />
+    <Content Include="Assets\img\icons\silk\table_add.png" />
+    <Content Include="Assets\img\icons\silk\table_cell.png" />
+    <Content Include="Assets\img\icons\silk\table_column.png" />
+    <Content Include="Assets\img\icons\silk\table_column_add.png" />
+    <Content Include="Assets\img\icons\silk\table_column_delete.png" />
+    <Content Include="Assets\img\icons\silk\table_connect.png" />
+    <Content Include="Assets\img\icons\silk\table_delete.png" />
+    <Content Include="Assets\img\icons\silk\table_edit.png" />
+    <Content Include="Assets\img\icons\silk\table_error.png" />
+    <Content Include="Assets\img\icons\silk\table_gear.png" />
+    <Content Include="Assets\img\icons\silk\table_go.png" />
+    <Content Include="Assets\img\icons\silk\table_key.png" />
+    <Content Include="Assets\img\icons\silk\table_lightning.png" />
+    <Content Include="Assets\img\icons\silk\table_link.png" />
+    <Content Include="Assets\img\icons\silk\table_multiple.png" />
+    <Content Include="Assets\img\icons\silk\table_refresh.png" />
+    <Content Include="Assets\img\icons\silk\table_relationship.png" />
+    <Content Include="Assets\img\icons\silk\table_row.png" />
+    <Content Include="Assets\img\icons\silk\table_row_delete.png" />
+    <Content Include="Assets\img\icons\silk\table_row_insert.png" />
+    <Content Include="Assets\img\icons\silk\table_save.png" />
+    <Content Include="Assets\img\icons\silk\table_sort.png" />
+    <Content Include="Assets\img\icons\silk\tab_add.png" />
+    <Content Include="Assets\img\icons\silk\tab_blue.png" />
+    <Content Include="Assets\img\icons\silk\tab_delete.png" />
+    <Content Include="Assets\img\icons\silk\tab_edit.png" />
+    <Content Include="Assets\img\icons\silk\tab_go.png" />
+    <Content Include="Assets\img\icons\silk\tab_green.png" />
+    <Content Include="Assets\img\icons\silk\tab_red.png" />
+    <Content Include="Assets\img\icons\silk\tag.png" />
+    <Content Include="Assets\img\icons\silk\tags_grey.png" />
+    <Content Include="Assets\img\icons\silk\tags_red.png" />
+    <Content Include="Assets\img\icons\silk\tag_blue.png" />
+    <Content Include="Assets\img\icons\silk\tag_blue_add.png" />
+    <Content Include="Assets\img\icons\silk\tag_blue_delete.png" />
+    <Content Include="Assets\img\icons\silk\tag_blue_edit.png" />
+    <Content Include="Assets\img\icons\silk\tag_green.png" />
+    <Content Include="Assets\img\icons\silk\tag_orange.png" />
+    <Content Include="Assets\img\icons\silk\tag_pink.png" />
+    <Content Include="Assets\img\icons\silk\tag_purple.png" />
+    <Content Include="Assets\img\icons\silk\tag_red.png" />
+    <Content Include="Assets\img\icons\silk\tag_yellow.png" />
+    <Content Include="Assets\img\icons\silk\telephone.png" />
+    <Content Include="Assets\img\icons\silk\telephone_add.png" />
+    <Content Include="Assets\img\icons\silk\telephone_delete.png" />
+    <Content Include="Assets\img\icons\silk\telephone_edit.png" />
+    <Content Include="Assets\img\icons\silk\telephone_error.png" />
+    <Content Include="Assets\img\icons\silk\telephone_go.png" />
+    <Content Include="Assets\img\icons\silk\telephone_key.png" />
+    <Content Include="Assets\img\icons\silk\telephone_link.png" />
+    <Content Include="Assets\img\icons\silk\telephone_red.png" />
+    <Content Include="Assets\img\icons\silk\television.png" />
+    <Content Include="Assets\img\icons\silk\television_add.png" />
+    <Content Include="Assets\img\icons\silk\television_delete.png" />
+    <Content Include="Assets\img\icons\silk\television_in.png" />
+    <Content Include="Assets\img\icons\silk\television_off.png" />
+    <Content Include="Assets\img\icons\silk\television_out.png" />
+    <Content Include="Assets\img\icons\silk\television_star.png" />
+    <Content Include="Assets\img\icons\silk\textfield.png" />
+    <Content Include="Assets\img\icons\silk\textfield_add.png" />
+    <Content Include="Assets\img\icons\silk\textfield_delete.png" />
+    <Content Include="Assets\img\icons\silk\textfield_key.png" />
+    <Content Include="Assets\img\icons\silk\textfield_rename.png" />
+    <Content Include="Assets\img\icons\silk\text_ab.png" />
+    <Content Include="Assets\img\icons\silk\text_align_center.png" />
+    <Content Include="Assets\img\icons\silk\text_align_justify.png" />
+    <Content Include="Assets\img\icons\silk\text_align_left.png" />
+    <Content Include="Assets\img\icons\silk\text_align_right.png" />
+    <Content Include="Assets\img\icons\silk\text_allcaps.png" />
+    <Content Include="Assets\img\icons\silk\text_bold.png" />
+    <Content Include="Assets\img\icons\silk\text_columns.png" />
+    <Content Include="Assets\img\icons\silk\text_complete.png" />
+    <Content Include="Assets\img\icons\silk\text_direction.png" />
+    <Content Include="Assets\img\icons\silk\text_double_underline.png" />
+    <Content Include="Assets\img\icons\silk\text_dropcaps.png" />
+    <Content Include="Assets\img\icons\silk\text_fit.png" />
+    <Content Include="Assets\img\icons\silk\text_flip.png" />
+    <Content Include="Assets\img\icons\silk\text_font_default.png" />
+    <Content Include="Assets\img\icons\silk\text_heading_1.png" />
+    <Content Include="Assets\img\icons\silk\text_heading_2.png" />
+    <Content Include="Assets\img\icons\silk\text_heading_3.png" />
+    <Content Include="Assets\img\icons\silk\text_heading_4.png" />
+    <Content Include="Assets\img\icons\silk\text_heading_5.png" />
+    <Content Include="Assets\img\icons\silk\text_heading_6.png" />
+    <Content Include="Assets\img\icons\silk\text_horizontalrule.png" />
+    <Content Include="Assets\img\icons\silk\text_indent.png" />
+    <Content Include="Assets\img\icons\silk\text_indent_remove.png" />
+    <Content Include="Assets\img\icons\silk\text_inverse.png" />
+    <Content Include="Assets\img\icons\silk\text_italic.png" />
+    <Content Include="Assets\img\icons\silk\text_kerning.png" />
+    <Content Include="Assets\img\icons\silk\text_left_to_right.png" />
+    <Content Include="Assets\img\icons\silk\text_letterspacing.png" />
+    <Content Include="Assets\img\icons\silk\text_letter_omega.png" />
+    <Content Include="Assets\img\icons\silk\text_linespacing.png" />
+    <Content Include="Assets\img\icons\silk\text_list_bullets.png" />
+    <Content Include="Assets\img\icons\silk\text_list_numbers.png" />
+    <Content Include="Assets\img\icons\silk\text_lowercase.png" />
+    <Content Include="Assets\img\icons\silk\text_lowercase_a.png" />
+    <Content Include="Assets\img\icons\silk\text_mirror.png" />
+    <Content Include="Assets\img\icons\silk\text_padding_bottom.png" />
+    <Content Include="Assets\img\icons\silk\text_padding_left.png" />
+    <Content Include="Assets\img\icons\silk\text_padding_right.png" />
+    <Content Include="Assets\img\icons\silk\text_padding_top.png" />
+    <Content Include="Assets\img\icons\silk\text_replace.png" />
+    <Content Include="Assets\img\icons\silk\text_right_to_left.png" />
+    <Content Include="Assets\img\icons\silk\text_rotate_0.png" />
+    <Content Include="Assets\img\icons\silk\text_rotate_180.png" />
+    <Content Include="Assets\img\icons\silk\text_rotate_270.png" />
+    <Content Include="Assets\img\icons\silk\text_rotate_90.png" />
+    <Content Include="Assets\img\icons\silk\text_ruler.png" />
+    <Content Include="Assets\img\icons\silk\text_shading.png" />
+    <Content Include="Assets\img\icons\silk\text_signature.png" />
+    <Content Include="Assets\img\icons\silk\text_smallcaps.png" />
+    <Content Include="Assets\img\icons\silk\text_spelling.png" />
+    <Content Include="Assets\img\icons\silk\text_strikethrough.png" />
+    <Content Include="Assets\img\icons\silk\text_subscript.png" />
+    <Content Include="Assets\img\icons\silk\text_superscript.png" />
+    <Content Include="Assets\img\icons\silk\text_tab.png" />
+    <Content Include="Assets\img\icons\silk\text_underline.png" />
+    <Content Include="Assets\img\icons\silk\text_uppercase.png" />
+    <Content Include="Assets\img\icons\silk\theme.png" />
+    <Content Include="Assets\img\icons\silk\thumb_down.png" />
+    <Content Include="Assets\img\icons\silk\thumb_up.png" />
+    <Content Include="Assets\img\icons\silk\tick.png" />
+    <Content Include="Assets\img\icons\silk\time.png" />
+    <Content Include="Assets\img\icons\silk\timeline_marker.png" />
+    <Content Include="Assets\img\icons\silk\time_add.png" />
+    <Content Include="Assets\img\icons\silk\time_delete.png" />
+    <Content Include="Assets\img\icons\silk\time_go.png" />
+    <Content Include="Assets\img\icons\silk\time_green.png" />
+    <Content Include="Assets\img\icons\silk\time_red.png" />
+    <Content Include="Assets\img\icons\silk\transmit.png" />
+    <Content Include="Assets\img\icons\silk\transmit_add.png" />
+    <Content Include="Assets\img\icons\silk\transmit_blue.png" />
+    <Content Include="Assets\img\icons\silk\transmit_delete.png" />
+    <Content Include="Assets\img\icons\silk\transmit_edit.png" />
+    <Content Include="Assets\img\icons\silk\transmit_error.png" />
+    <Content Include="Assets\img\icons\silk\transmit_go.png" />
+    <Content Include="Assets\img\icons\silk\transmit_red.png" />
+    <Content Include="Assets\img\icons\silk\tux.png" />
+    <Content Include="Assets\img\icons\silk\user.png" />
+    <Content Include="Assets\img\icons\silk\user_add.png" />
+    <Content Include="Assets\img\icons\silk\user_alert.png" />
+    <Content Include="Assets\img\icons\silk\user_b.png" />
+    <Content Include="Assets\img\icons\silk\user_brown.png" />
+    <Content Include="Assets\img\icons\silk\user_comment.png" />
+    <Content Include="Assets\img\icons\silk\user_cross.png" />
+    <Content Include="Assets\img\icons\silk\user_delete.png" />
+    <Content Include="Assets\img\icons\silk\user_earth.png" />
+    <Content Include="Assets\img\icons\silk\user_edit.png" />
+    <Content Include="Assets\img\icons\silk\user_female.png" />
+    <Content Include="Assets\img\icons\silk\user_go.png" />
+    <Content Include="Assets\img\icons\silk\user_gray.png" />
+    <Content Include="Assets\img\icons\silk\user_gray_cool.png" />
+    <Content Include="Assets\img\icons\silk\user_green.png" />
+    <Content Include="Assets\img\icons\silk\user_home.png" />
+    <Content Include="Assets\img\icons\silk\user_key.png" />
+    <Content Include="Assets\img\icons\silk\user_magnify.png" />
+    <Content Include="Assets\img\icons\silk\user_mature.png" />
+    <Content Include="Assets\img\icons\silk\user_orange.png" />
+    <Content Include="Assets\img\icons\silk\user_red.png" />
+    <Content Include="Assets\img\icons\silk\user_star.png" />
+    <Content Include="Assets\img\icons\silk\user_suit.png" />
+    <Content Include="Assets\img\icons\silk\user_suit_black.png" />
+    <Content Include="Assets\img\icons\silk\user_tick.png" />
+    <Content Include="Assets\img\icons\silk\vcard.png" />
+    <Content Include="Assets\img\icons\silk\vcard_add.png" />
+    <Content Include="Assets\img\icons\silk\vcard_delete.png" />
+    <Content Include="Assets\img\icons\silk\vcard_edit.png" />
+    <Content Include="Assets\img\icons\silk\vcard_key.png" />
+    <Content Include="Assets\img\icons\silk\vector.png" />
+    <Content Include="Assets\img\icons\silk\vector_add.png" />
+    <Content Include="Assets\img\icons\silk\vector_delete.png" />
+    <Content Include="Assets\img\icons\silk\vector_key.png" />
+    <Content Include="Assets\img\icons\silk\wand.png" />
+    <Content Include="Assets\img\icons\silk\weather_cloud.png" />
+    <Content Include="Assets\img\icons\silk\weather_clouds.png" />
+    <Content Include="Assets\img\icons\silk\weather_cloudy.png" />
+    <Content Include="Assets\img\icons\silk\weather_cloudy_rain.png" />
+    <Content Include="Assets\img\icons\silk\weather_lightning.png" />
+    <Content Include="Assets\img\icons\silk\weather_rain.png" />
+    <Content Include="Assets\img\icons\silk\weather_snow.png" />
+    <Content Include="Assets\img\icons\silk\weather_sun.png" />
+    <Content Include="Assets\img\icons\silk\webcam.png" />
+    <Content Include="Assets\img\icons\silk\webcam_add.png" />
+    <Content Include="Assets\img\icons\silk\webcam_connect.png" />
+    <Content Include="Assets\img\icons\silk\webcam_delete.png" />
+    <Content Include="Assets\img\icons\silk\webcam_error.png" />
+    <Content Include="Assets\img\icons\silk\webcam_start.png" />
+    <Content Include="Assets\img\icons\silk\webcam_stop.png" />
+    <Content Include="Assets\img\icons\silk\world.png" />
+    <Content Include="Assets\img\icons\silk\world_add.png" />
+    <Content Include="Assets\img\icons\silk\world_connect.png" />
+    <Content Include="Assets\img\icons\silk\world_dawn.png" />
+    <Content Include="Assets\img\icons\silk\world_delete.png" />
+    <Content Include="Assets\img\icons\silk\world_edit.png" />
+    <Content Include="Assets\img\icons\silk\world_go.png" />
+    <Content Include="Assets\img\icons\silk\world_key.png" />
+    <Content Include="Assets\img\icons\silk\world_link.png" />
+    <Content Include="Assets\img\icons\silk\world_night.png" />
+    <Content Include="Assets\img\icons\silk\world_orbit.png" />
+    <Content Include="Assets\img\icons\silk\wrench.png" />
+    <Content Include="Assets\img\icons\silk\wrench_orange.png" />
+    <Content Include="Assets\img\icons\silk\xhtml.png" />
+    <Content Include="Assets\img\icons\silk\xhtml_add.png" />
+    <Content Include="Assets\img\icons\silk\xhtml_delete.png" />
+    <Content Include="Assets\img\icons\silk\xhtml_error.png" />
+    <Content Include="Assets\img\icons\silk\xhtml_go.png" />
+    <Content Include="Assets\img\icons\silk\xhtml_valid.png" />
+    <Content Include="Assets\img\icons\silk\zoom.png" />
+    <Content Include="Assets\img\icons\silk\zoom_in.png" />
+    <Content Include="Assets\img\icons\silk\zoom_out.png" />
+    <Content Include="Assets\img\pattern.png" />
+    <Content Include="Assets\img\skins\orange\button_left.gif" />
+    <Content Include="Assets\img\skins\orange\button_left.png" />
+    <Content Include="Assets\img\skins\orange\button_right.gif" />
+    <Content Include="Assets\img\skins\orange\button_right.png" />
+    <Content Include="Assets\img\skins\silver\button_left.gif" />
+    <Content Include="Assets\img\skins\silver\button_left.png" />
+    <Content Include="Assets\img\skins\silver\button_right.gif" />
+    <Content Include="Assets\img\skins\silver\button_right.png" />
+    <Content Include="Assets\img\skins\simple\awesome-overlay-sprite.png" />
+    <Content Include="Assets\img\skins\yellow\button_left.gif" />
+    <Content Include="Assets\img\skins\yellow\button_left.png" />
+    <Content Include="Assets\img\skins\yellow\button_right.gif" />
+    <Content Include="Assets\img\skins\yellow\button_right.png" />
+    <Content Include="Assets\img\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Assets\img\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="Assets\img\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="Assets\img\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Assets\img\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Assets\img\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="Assets\img\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="Assets\img\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Assets\img\ui-icons_217bc0_256x240.png" />
+    <Content Include="Assets\img\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Assets\img\ui-icons_469bdd_256x240.png" />
+    <Content Include="Assets\img\ui-icons_6da8d5_256x240.png" />
+    <Content Include="Assets\img\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Assets\img\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Assets\img\ui-icons_f9bd01_256x240.png" />
+    <Content Include="Assets\js\jq-watermark.js" />
+    <Content Include="Assets\js\jq-watermark.min.js" />
+    <Content Include="Assets\css\grid.css" />
+    <Content Include="Assets\css\ie.css" />
+    <Content Include="Assets\css\ie6.css" />
+    <Content Include="Assets\css\layout.css" />
+    <Content Include="Assets\css\nav.css" />
+    <Content Include="Assets\css\reset.css" />
+    <Content Include="Assets\css\site.css" />
+    <Content Include="Assets\css\text.css" />
+    <Content Include="Assets\js\jquery.dataTables.min.js" />
+    <Content Include="Global.asax" />
+    <Content Include="Assets\js\jquery-1.5.1-vsdoc.js" />
+    <Content Include="Assets\js\jquery-1.5.1.js" />
+    <Content Include="Assets\js\jquery-1.5.1.min.js" />
+    <Content Include="Assets\js\jquery-ui-1.8.11.js" />
+    <Content Include="Assets\js\jquery-ui-1.8.11.min.js" />
+    <Content Include="Assets\js\jquery.validate-vsdoc.js" />
+    <Content Include="Assets\js\jquery.validate.js" />
+    <Content Include="Assets\js\jquery.validate.min.js" />
+    <Content Include="Assets\js\modernizr-1.7.js" />
+    <Content Include="Assets\js\modernizr-1.7.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Assets\js\jquery.unobtrusive-ajax.js" />
+    <Content Include="Assets\js\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Assets\js\jquery.validate.unobtrusive.js" />
+    <Content Include="Assets\js\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Assets\js\MicrosoftAjax.js" />
+    <Content Include="Assets\js\MicrosoftAjax.debug.js" />
+    <Content Include="Assets\js\MicrosoftMvcAjax.js" />
+    <Content Include="Assets\js\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Assets\js\MicrosoftMvcValidation.js" />
+    <Content Include="Assets\js\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Account\ChangePassword.cshtml" />
+    <Content Include="Views\Account\ChangePasswordSuccess.cshtml" />
+    <Content Include="Views\Account\LogOn.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_LogOnPartial.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Scripts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{D60E4952-6F10-4285-A42D-352D11A15711}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Domain\Domain.csproj">
+      <Project>{3FE8DDD0-1769-4D46-88D4-F82B5CB54E4F}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Persistence\Persistence.csproj">
+      <Project>{897B447F-A75B-4F77-9E0F-D3BF8FF4D274}</Project>
+      <Name>Persistence</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="config\cachingConfiguration.config" />
+    <Content Include="config\css.config" />
+    <Content Include="config\scripts.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\img\skins\ButtonTemplate.psd" />
+    <Content Include="Views\UserManager\Create.cshtml" />
+    <Content Include="Views\UserManager\Edit.cshtml" />
+    <Content Include="Views\UserManager\List.cshtml" />
+    <Content Include="Views\RoleManager\Create.cshtml" />
+    <Content Include="Views\RoleManager\Edit.cshtml" />
+    <Content Include="Views\RoleManager\List.cshtml" />
+    <Content Include="Views\Home\AddBookmark.cshtml" />
+    <Content Include="Views\Home\EditBookmark.cshtml" />
+    <Content Include="Views\Shared\InfoMessage.cshtml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50848</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

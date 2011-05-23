@@ -1,0 +1,55 @@
+D:\work\projects\Evozon.Erm\Core\bin\Debug\Evozon.Erm.Core.dll.config
+D:\work\projects\Evozon.Erm\Core\bin\Debug\Evozon.Erm.Core.dll
+D:\work\projects\Evozon.Erm\Core\bin\Debug\Evozon.Erm.Core.pdb
+D:\work\projects\Evozon.Erm\Core\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.dll
+D:\work\projects\Evozon.Erm\Core\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\work\projects\Evozon.Erm\Core\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\work\projects\Evozon.Erm\Core\bin\Debug\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
+D:\work\projects\Evozon.Erm\Core\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+D:\work\projects\Evozon.Erm\Core\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Validation.dll
+D:\work\projects\Evozon.Erm\Core\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.AspNet.dll
+D:\work\projects\Evozon.Erm\Core\bin\Debug\Microsoft.Practices.Unity.dll
+D:\work\projects\Evozon.Erm\Core\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\work\projects\Evozon.Erm\Core\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+D:\work\projects\Evozon.Erm\Core\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+D:\work\projects\Evozon.Erm\Core\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.pdb
+D:\work\projects\Evozon.Erm\Core\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.xml
+D:\work\projects\Evozon.Erm\Core\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.pdb
+D:\work\projects\Evozon.Erm\Core\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml
+D:\work\projects\Evozon.Erm\Core\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.pdb
+D:\work\projects\Evozon.Erm\Core\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.xml
+D:\work\projects\Evozon.Erm\Core\bin\Debug\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.pdb
+D:\work\projects\Evozon.Erm\Core\bin\Debug\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.xml
+D:\work\projects\Evozon.Erm\Core\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.pdb
+D:\work\projects\Evozon.Erm\Core\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.xml
+D:\work\projects\Evozon.Erm\Core\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Validation.pdb
+D:\work\projects\Evozon.Erm\Core\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Validation.xml
+D:\work\projects\Evozon.Erm\Core\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.AspNet.pdb
+D:\work\projects\Evozon.Erm\Core\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.AspNet.xml
+D:\work\projects\Evozon.Erm\Core\bin\Debug\Microsoft.Practices.Unity.pdb
+D:\work\projects\Evozon.Erm\Core\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+D:\work\projects\Evozon.Erm\Core\bin\Debug\Microsoft.Practices.Unity.Interception.pdb
+D:\work\projects\Evozon.Erm\Core\bin\Debug\Microsoft.Practices.Unity.Configuration.pdb
+D:\work\projects\Evozon.Erm\Core\obj\Debug\ResolveAssemblyReference.cache
+D:\work\projects\Evozon.Erm\Core\obj\Debug\Evozon.Erm.Core.dll
+D:\work\projects\Evozon.Erm\Core\obj\Debug\Evozon.Erm.Core.pdb
+C:\Users\mihailazar\documents\visual studio 2010\Projects\Experiments\AppHarbor\Booker\Core\bin\Debug\Core.dll.config
+C:\Users\mihailazar\documents\visual studio 2010\Projects\Experiments\AppHarbor\Booker\Core\bin\Debug\Core.dll
+C:\Users\mihailazar\documents\visual studio 2010\Projects\Experiments\AppHarbor\Booker\Core\bin\Debug\Core.pdb
+C:\Users\mihailazar\documents\visual studio 2010\Projects\Experiments\AppHarbor\Booker\Core\bin\Debug\AjaxMin.dll
+C:\Users\mihailazar\documents\visual studio 2010\Projects\Experiments\AppHarbor\Booker\Core\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.dll
+C:\Users\mihailazar\documents\visual studio 2010\Projects\Experiments\AppHarbor\Booker\Core\bin\Debug\Novell.Directory.Ldap.dll
+C:\Users\mihailazar\documents\visual studio 2010\Projects\Experiments\AppHarbor\Booker\Core\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\mihailazar\documents\visual studio 2010\Projects\Experiments\AppHarbor\Booker\Core\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\mihailazar\documents\visual studio 2010\Projects\Experiments\AppHarbor\Booker\Core\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Users\mihailazar\documents\visual studio 2010\Projects\Experiments\AppHarbor\Booker\Core\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+C:\Users\mihailazar\documents\visual studio 2010\Projects\Experiments\AppHarbor\Booker\Core\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.pdb
+C:\Users\mihailazar\documents\visual studio 2010\Projects\Experiments\AppHarbor\Booker\Core\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.xml
+C:\Users\mihailazar\documents\visual studio 2010\Projects\Experiments\AppHarbor\Booker\Core\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.pdb
+C:\Users\mihailazar\documents\visual studio 2010\Projects\Experiments\AppHarbor\Booker\Core\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml
+C:\Users\mihailazar\documents\visual studio 2010\Projects\Experiments\AppHarbor\Booker\Core\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\mihailazar\documents\visual studio 2010\Projects\Experiments\AppHarbor\Booker\Core\bin\Debug\Microsoft.Practices.Unity.pdb
+C:\Users\mihailazar\documents\visual studio 2010\Projects\Experiments\AppHarbor\Booker\Core\bin\Debug\Microsoft.Practices.Unity.Interception.pdb
+C:\Users\mihailazar\documents\visual studio 2010\Projects\Experiments\AppHarbor\Booker\Core\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\mihailazar\documents\visual studio 2010\Projects\Experiments\AppHarbor\Booker\Core\obj\Debug\Core.dll
+C:\Users\mihailazar\documents\visual studio 2010\Projects\Experiments\AppHarbor\Booker\Core\obj\Debug\Core.pdb

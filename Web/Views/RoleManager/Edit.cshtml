@@ -1,0 +1,133 @@
+﻿@model Web.Models.RoleManager.RoleManagerEditOutput
+@{
+    ViewBag.Title = "Edit role " + Model.Role.Name;
+}
+<div class="six_column section page">
+    <div class="column_content">
+        @using (Html.BeginForm())
+        {
+            <div class="six_column page_header">
+                <h2>
+                    Editing @Model.Role.Name</h2>
+            </div>
+            <div class="six_column">
+                @Html.ValidationSummary(true)
+            </div>
+            <fieldset class="fieldsCollections">
+                <div class="six_column section">
+                    <div class="one column">
+                        <label>
+                            Name:
+                        </label>
+                    </div>
+                    <div class="four column">
+                        &nbsp; @Html.TextBoxFor(m => m.Role.Name)
+                    </div>
+                    <div class="one column">
+                        @Html.ValidationMessageFor(m => m.Role.Name)
+                    </div>
+                </div>
+                <div class="six_column section">
+                    <div class="one column" style="vertical-align: top">
+                        <label>
+                            Description:
+                        </label>
+                    </div>
+                    <div class="four column">
+                        &nbsp; @Html.TextAreaFor(m => m.Role.Description)
+                    </div>
+                    <div class="one column">
+                        @Html.ValidationMessageFor(m => m.Role.Description)
+                    </div>
+                </div>
+            </fieldset>
+            
+            <div class="six_column form_buttons">
+                @Html.SubmitButton("submit-form", "Save", new
+               {
+                   @class = "sexybutton sexysimple sexyteal"
+               }) <span>or </span><a class="cancel" href="@(Html.BuildUrlFromExpression<RoleManagerController>(it => it.List()))">
+                   Cancel</a>
+            </div>
+
+        }
+        <div class="six_column section">
+            <p class="info request-submitted" style="display:none;" >
+                You're request has been submitted. The changes will be applied shortly. 
+            </p> 
+        </div>
+        <div class="six_column section">
+            <h3>
+                Functions</h3>
+            <hr />
+            @foreach (var function in Model.Functions)
+            {
+                <div class="six_column section">
+                    <div class="three column">
+                        @function.Function.Name
+                    </div>
+                    <div class="three column">
+                        @if (!@function.IsLinked)
+                        {
+                            <button class="assign-role sexybutton sexysimple sexygreen" 
+                                funcId ='@function.Function.Id'
+                                roleId = '@Model.Role.Id' 
+                                action="@Url.Action("Assign")">
+                                    Assign
+                            </button>
+                        }
+                        else
+                        {
+                <button class="unassign-role sexybutton sexysimple sexyred" 
+                                funcId ='@function.Function.Id'
+                                roleId = '@Model.Role.Id' 
+                                action="@Url.Action("UnAssign")">
+                                    Remove
+                            </button>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script type="text/javascript" language="javascript">
+
+        $(function () {
+            function performActionOn(item) {
+                var action = item.attr('action');
+                var roleId = item.attr('roleId');
+                var funcId = item.attr('funcId');
+                $.post(action, { functionId: funcId, roleId: roleId });
+
+                var requestSubmitted = $(".request-submitted");
+
+                requestSubmitted.show("slow").delay(3000).hide('normal');
+
+            }
+
+            $(".assign-role").click(function () {
+                var current = $(this);
+
+                current.replaceWith("<span>Function is being assigned to this role</span>");
+
+                performActionOn(current);
+
+
+            });
+
+            $(".unassign-role").click(function () {
+                var current = $(this);
+
+                current.replaceWith("<span>Function is being unassigned from this role</span>");
+
+                performActionOn(current);
+            });
+
+
+        });
+    </script>
+
+}

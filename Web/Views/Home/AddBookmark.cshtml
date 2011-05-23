@@ -1,0 +1,22 @@
+﻿@model Web.Models.Home.AddBookmark
+@using (Html.BeginForm<HomeController>(c => c.AddBookmark()))
+{
+
+	<div class="grid_12 suffix_4">
+		<fieldset>
+			<legend>Add Bookmark</legend>
+			@Html.LabelFor(m => m.Url)
+			@Html.TextBoxFor(m => m.Url)
+			<br />
+			@Html.LabelFor(m => m.Notes)
+			@Html.TextAreaFor(m => m.Notes, new { cols = 90, rows = 5 })
+		</fieldset>
+		<div class="form_buttons">
+			@Html.SubmitButton("submit-form", "Save", new
+			   {
+				   @class = "sexybutton sexysimple sexyteal"
+			   }) <span>or </span><a class="cancel" href="@(Html.BuildUrlFromExpression<HomeController>(it => it.Index()))">
+				   Cancel</a>
+		</div>
+	</div>
+}

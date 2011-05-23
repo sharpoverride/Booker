@@ -1,0 +1,57 @@
+﻿@model RoleManagerListOutputModel
+@{
+	ViewBag.Title = "List of roles";
+	int itemCount = 0;
+}
+<div class="grid_12 section ">
+	<div>
+		@Html.Partial("InfoMessage", this.Model.InfoMessage)
+		<div class="page_header">
+			<h2>
+				Roles</h2>
+		</div>
+		<table>
+			<tr>
+				<th>
+					Name
+				</th>
+				<th>
+					Description
+				</th>
+				<th>
+					#Functions
+				</th>
+			</tr>
+		
+			@foreach (var role in this.Model.Roles)
+   {
+				<tr class="@((itemCount++%2==0) ? "odd": "even")">
+					<td>
+						@role.Name
+					</td>
+					<td>
+						@role.Description
+					</td>
+					<td>
+						@(Html.ActionLink<RoleManagerController>(call => call.Edit(role.Id
+						), "Assign functions"))
+					</td>
+				</tr>
+   }
+		</table>
+	</div>
+</div>
+<div class="grid_4 info">
+	<h3>
+		Actions</h3>
+	<div class="page_header_buttons">
+		<a href="@(Html.BuildUrlFromExpression<RoleManagerController>(it => it.Create()))">
+			<button type="button" class="sexybutton sexysimple sexygreen">
+				Create new</button></a>
+	</div>
+	<h3>
+		user help</h3>
+	<p>
+		any relevant information should be placed here
+	</p>
+</div>

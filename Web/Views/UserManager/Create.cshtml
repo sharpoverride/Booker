@@ -1,0 +1,46 @@
+﻿@model Web.Models.UserManager.UserManagerCreateModel
+
+@{
+    ViewBag.Title = "Create a new employee";
+}
+@{Html.BeginForm<UserManagerController>(r => r.Create());}
+<div class="grid_12">
+    <div class="column_content">
+        <div class="six_column page_header">
+           <h2>Create a new employee</h2> 
+        </div>
+        <fieldset class="fieldsCollection ">
+            
+            <div class="six_column section">
+                <div class="one column">
+                    <label>
+                        Name:
+                    </label>
+                </div>
+                <div class="four column">
+                    &nbsp; @Html.TextBoxFor(m => m.Employee.UserName)
+                </div>
+                <div class="one column">
+                    @Html.ValidationMessageFor(m => m.Employee.UserName)
+                </div>
+            </div>
+           
+            <div class="six_column section">
+                <div class="one column">
+                    &nbsp;
+                </div>
+                <div class="five column">
+                </div>
+        </fieldset>
+        <div class="six_column form_buttons">
+            @Html.SubmitButton("submit-form", "Save", new
+               {
+                   @class = "sexybutton sexysimple sexyteal"
+               }) <span> or </span>
+
+               <a class="cancel" href="@(Html.BuildUrlFromExpression<UserManagerController>(it => it.List()))">
+                                  Cancel</a>
+        </div>
+    </div>
+</div>
+@{Html.EndForm();}

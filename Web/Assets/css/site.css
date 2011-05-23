@@ -1,0 +1,63 @@
+﻿header h1
+{
+	height: 60px;
+}
+
+.dataTables_info, .dataTables_paginate,
+ .dataTables_length, .dataTables_filter
+{
+	display: inline;
+	float: left;
+	margin-left: 1%;
+	margin-right: 1%;
+	width: 35.5%;
+}
+.dataTables_filter
+{
+	float:right;
+}
+
+.dataTables_info
+{
+	width: 54.25%; /* grid 8*/
+}
+.dataTables_paginate
+{
+	width: 4.25%;/*grid 2*/
+}
+.dataTables_paginate .paginate_button
+{
+	padding: 2px 4px 2px 4px;
+	cursor: pointer;
+}
+.dataTables_paginate .paginate_active
+{
+	padding: 2px 4px 2px 4px;
+	font-weight:bold;
+	color:orange;
+}
+
+
+div.login
+{
+	border-radius : 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	box-shadow: 0 0 6px #999;
+	
+	-moz-box-shadow: 0 0 6px #999;
+	-webkit-box-shadow: 0 0 6px #999;
+	
+	background:whiteSmoke;
+	padding:25px 28px;
+	margin: 13% auto;
+}
+
+div.login .editor-field input
+{
+	width:70%;	
+}
+div.current_user
+{
+	text-align:right;
+}
