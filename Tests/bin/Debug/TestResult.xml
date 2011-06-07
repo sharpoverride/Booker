@@ -1,26 +1,163 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\mihailazar\documents\visual studio 2010\Projects\Experiments\AppHarbor\Booker\Tests\bin\Debug\Tests.dll" total="6" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2011-04-28" time="15:05:58">
-  <environment nunit-version="2.5.5.10112" clr-version="4.0.30319.225" os-version="Microsoft Windows NT 6.1.7600.0" platform="Win32NT" cwd="C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE" machine-name="EVOL075" user="mihailazar" user-domain="EVOL075" />
+<test-results name="C:\Users\mihailazar\Documents\Visual Studio 2010\Projects\Experiments\AppHarbor\BookerClean\Tests\bin\Debug\Tests.dll" total="51" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2011-06-06" time="10:31:21">
+  <environment nunit-version="2.5.5.10112" clr-version="4.0.30319.225" os-version="Microsoft Windows NT 6.1.7600.0" platform="Win32NT" cwd="C:\Windows\system32" machine-name="EVOL075" user="mihailazar" user-domain="EVOL075" />
   <culture-info current-culture="en-US" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="C:\Users\mihailazar\documents\visual studio 2010\Projects\Experiments\AppHarbor\Booker\Tests\bin\Debug\Tests.dll" executed="True" result="Success" success="True" time="1.244" asserts="0">
+  <test-suite type="Assembly" name="C:\Users\mihailazar\Documents\Visual Studio 2010\Projects\Experiments\AppHarbor\BookerClean\Tests\bin\Debug\Tests.dll" executed="True" result="Success" success="True" time="3.747" asserts="0">
     <results>
-      <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="1.237" asserts="0">
+      <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="1.847" asserts="0">
         <results>
-          <test-suite type="Namespace" name="Unit" executed="True" result="Success" success="True" time="1.235" asserts="0">
+          <test-suite type="Namespace" name="Unit" executed="True" result="Success" success="True" time="1.845" asserts="0">
             <results>
-              <test-suite type="Namespace" name="Controllers" executed="True" result="Success" success="True" time="1.233" asserts="0">
+              <test-suite type="Namespace" name="Controllers" executed="True" result="Success" success="True" time="1.107" asserts="0">
                 <results>
-                  <test-suite type="TestFixture" name="HomeControllerTests" executed="True" result="Success" success="True" time="1.231" asserts="0">
+                  <test-suite type="TestFixture" name="HomeControllerTests" executed="True" result="Success" success="True" time="1.105" asserts="0">
                     <results>
-                      <test-case name="Tests.Unit.Controllers.HomeControllerTests.AddBookmark_Should_Retrieve_View" executed="True" result="Success" success="True" time="0.055" asserts="2" />
-                      <test-case name="Tests.Unit.Controllers.HomeControllerTests.AddBookmark_WithInput_Saves_Data" executed="True" result="Success" success="True" time="0.986" asserts="3" />
-                      <test-case name="Tests.Unit.Controllers.HomeControllerTests.EditBookmark_Should_RetrieveView" executed="True" result="Success" success="True" time="0.029" asserts="1" />
-                      <test-case name="Tests.Unit.Controllers.HomeControllerTests.EditBookmark_WithInput_SavesData" executed="True" result="Success" success="True" time="0.041" asserts="0" />
-                      <test-case name="Tests.Unit.Controllers.HomeControllerTests.Index_Returns_BookmarkLists" executed="True" result="Success" success="True" time="0.060" asserts="4" />
-                      <test-case name="Tests.Unit.Controllers.HomeControllerTests.Index_Should_Retrieve_List_Of_Bookmarks_From_QueryService" executed="True" result="Success" success="True" time="0.004" asserts="0" />
+                      <test-case name="Tests.Unit.Controllers.HomeControllerTests.AddBookmark_Should_Retrieve_View" executed="True" result="Success" success="True" time="0.026" asserts="2" />
+                      <test-case name="Tests.Unit.Controllers.HomeControllerTests.AddBookmark_WithInput_Saves_Data" executed="True" result="Success" success="True" time="0.900" asserts="3" />
+                      <test-case name="Tests.Unit.Controllers.HomeControllerTests.DeleteBookmark_RemovesData" executed="True" result="Success" success="True" time="0.060" asserts="1" />
+                      <test-case name="Tests.Unit.Controllers.HomeControllerTests.EditBookmark_Should_RetrieveView" executed="True" result="Success" success="True" time="0.005" asserts="1" />
+                      <test-case name="Tests.Unit.Controllers.HomeControllerTests.EditBookmark_WithInput_SavesData" executed="True" result="Success" success="True" time="0.027" asserts="0" />
+                      <test-case name="Tests.Unit.Controllers.HomeControllerTests.Index_Returns_BookmarkLists" executed="True" result="Success" success="True" time="0.051" asserts="4" />
+                      <test-case name="Tests.Unit.Controllers.HomeControllerTests.Index_Should_Retrieve_List_Of_Bookmarks_From_QueryService" executed="True" result="Success" success="True" time="0.005" asserts="0" />
                     </results>
                   </test-suite>
+                </results>
+              </test-suite>
+              <test-suite type="Namespace" name="ModelProviders" executed="True" result="Success" success="True" time="0.462" asserts="0">
+                <results>
+                  <test-suite type="TestFixture" name="UserManagerAssignModelProvider" executed="True" result="Success" success="True" time="0.461" asserts="0">
+                    <results>
+                      <test-case name="Tests.Unit.ModelProviders.UserManagerAssignModelProvider.Links_User_To_Role" executed="True" result="Success" success="True" time="0.460" asserts="0" />
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+              <test-suite type="Namespace" name="Security" executed="True" result="Success" success="True" time="0.267" asserts="0">
+                <results>
+                  <test-suite type="TestFixture" name="RequiresAttributeTests" executed="True" result="Success" success="True" time="0.266" asserts="0">
+                    <results>
+                      <test-case name="Tests.Unit.Security.RequiresAttributeTests.OnAuthorization_FailsWhen_UserNotSignedIn" executed="True" result="Success" success="True" time="0.244" asserts="1" />
+                      <test-case name="Tests.Unit.Security.RequiresAttributeTests.OnAuthorization_FailsWhen_UserSignedIn_And_DoesNotHaveFunction_Assigned" executed="True" result="Success" success="True" time="0.006" asserts="1" />
+                      <test-case name="Tests.Unit.Security.RequiresAttributeTests.OnAuthorization_Works_When_UserSignedIn_And_HasFunctionRight" executed="True" result="Success" success="True" time="0.014" asserts="1" />
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="Namespace" name="UnitTests" executed="True" result="Success" success="True" time="1.889" asserts="0">
+        <results>
+          <test-suite type="Namespace" name="Controllers" executed="True" result="Success" success="True" time="1.451" asserts="0">
+            <results>
+              <test-suite type="TestFixture" name="AccountControllerTest" executed="True" result="Success" success="True" time="0.104" asserts="0">
+                <results>
+                  <test-case name="UnitTests.Controllers.AccountControllerTest.LogOff_LogsOutAndRedirects" executed="True" result="Success" success="True" time="0.003" asserts="4" />
+                  <test-case name="UnitTests.Controllers.AccountControllerTest.LogOn_Get_ReturnsView" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="UnitTests.Controllers.AccountControllerTest.LogOn_Post_CreatesANewUser_IfQueryUserDoesNotFindOne_ForSuccessfullLogin" executed="True" result="Success" success="True" time="0.075" asserts="4" />
+                  <test-case name="UnitTests.Controllers.AccountControllerTest.LogOn_Post_ReturnsRedirectOnSuccess_WithoutReturnUrl" executed="True" result="Success" success="True" time="0.004" asserts="6" />
+                  <test-case name="UnitTests.Controllers.AccountControllerTest.LogOn_Post_ReturnsRedirectOnSuccess_WithReturnUrl" executed="True" result="Success" success="True" time="0.004" asserts="5" />
+                  <test-case name="UnitTests.Controllers.AccountControllerTest.LogOn_Post_ReturnsViewIfModelStateIsInvalid" executed="True" result="Success" success="True" time="0.003" asserts="2" />
+                  <test-case name="UnitTests.Controllers.AccountControllerTest.LogOn_Post_ReturnsViewIfValidateUserFails" executed="True" result="Success" success="True" time="0.001" asserts="3" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="CssControllerTests" executed="True" result="Success" success="True" time="0.015" asserts="0">
+                <results>
+                  <test-case name="UnitTests.Controllers.CssControllerTests.Index_Get_ReturnsContentTypeResult" executed="True" result="Success" success="True" time="0.002" asserts="4" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="JavascriptControllerTests" executed="True" result="Success" success="True" time="0.012" asserts="0">
+                <results>
+                  <test-case name="UnitTests.Controllers.JavascriptControllerTests.Index_Get_Returns" executed="True" result="Success" success="True" time="0.001" asserts="4" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="RoleManagerTests" executed="True" result="Success" success="True" time="1.192" asserts="0">
+                <results>
+                  <test-case name="UnitTests.Controllers.RoleManagerTests.GET_Create_UsesCreateOutputModel" executed="True" result="Success" success="True" time="0.751" asserts="2" />
+                  <test-case name="UnitTests.Controllers.RoleManagerTests.GET_Edit_Loads_Role_By_Id" executed="True" result="Success" success="True" time="0.184" asserts="3" />
+                  <test-case name="UnitTests.Controllers.RoleManagerTests.GET_Edit_RedirectsToHome_When_IdNotFound" executed="True" result="Success" success="True" time="0.010" asserts="3" />
+                  <test-case name="UnitTests.Controllers.RoleManagerTests.GET_Edit_RedirectsToHome_WhenNoId_IsSupplied" executed="True" result="Success" success="True" time="0.001" asserts="3" />
+                  <test-case name="UnitTests.Controllers.RoleManagerTests.GET_List_Has_ListOutputModel_RequestsRoles" executed="True" result="Success" success="True" time="0.128" asserts="2" />
+                  <test-case name="UnitTests.Controllers.RoleManagerTests.GET_List_ListOutputModel_RetrievesInfoString_From_TempData_InfoKey" executed="True" result="Success" success="True" time="0.011" asserts="3" />
+                  <test-case name="UnitTests.Controllers.RoleManagerTests.POST_Assign_Adds_A_NewFunctionRight_To_Role" executed="True" result="Success" success="True" time="0.050" asserts="1" />
+                  <test-case name="UnitTests.Controllers.RoleManagerTests.POST_Create_Saves_NewRole" executed="True" result="Success" success="True" time="0.021" asserts="4" />
+                  <test-case name="UnitTests.Controllers.RoleManagerTests.POST_UnAssing_Removes_A_FunctionRight_From_Role" executed="True" result="Success" success="True" time="0.027" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="UserManagerTests" executed="True" result="Success" success="True" time="0.117" asserts="0">
+                <results>
+                  <test-case name="UnitTests.Controllers.UserManagerTests.GET_Create_Returns_CreatePage" executed="True" result="Success" success="True" time="0.001" asserts="2" />
+                  <test-case name="UnitTests.Controllers.UserManagerTests.GET_Edit_Returns_EditPage" executed="True" result="Success" success="True" time="0.029" asserts="4" />
+                  <test-case name="UnitTests.Controllers.UserManagerTests.GET_List_BringsAllUsers" executed="True" result="Success" success="True" time="0.026" asserts="2" />
+                  <test-case name="UnitTests.Controllers.UserManagerTests.POST_Assign_ReturnsEmptyResult" executed="True" result="Success" success="True" time="0.028" asserts="1" />
+                  <test-case name="UnitTests.Controllers.UserManagerTests.POST_UnAssign_ReturnsEmptyResult" executed="True" result="Success" success="True" time="0.027" asserts="1" />
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+          <test-suite type="Namespace" name="ModelProviders" executed="True" result="Success" success="True" time="0.161" asserts="0">
+            <results>
+              <test-suite type="TestFixture" name="RoleManagerAssignModelProvider" executed="True" result="Success" success="True" time="0.042" asserts="0">
+                <results>
+                  <test-case name="UnitTests.ModelProviders.RoleManagerAssignModelProvider.It_LinksA_Function_ToA_Role" executed="True" result="Success" success="True" time="0.042" asserts="0" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="RoleManagerEditOutput_Tests" executed="True" result="Success" success="True" time="0.011" asserts="0">
+                <results>
+                  <test-case name="UnitTests.ModelProviders.RoleManagerEditOutput_Tests.Foobar" executed="True" result="Success" success="True" time="0.011" asserts="6" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="RoleManagerUnAssignModelProvider" executed="True" result="Success" success="True" time="0.007" asserts="0">
+                <results>
+                  <test-case name="UnitTests.ModelProviders.RoleManagerUnAssignModelProvider.RemoveFunctionFromRole_Updates_Role_AndRemoves_Function" executed="True" result="Success" success="True" time="0.007" asserts="0" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="UserManagerEditModelProvider" executed="True" result="Success" success="True" time="0.081" asserts="0">
+                <results>
+                  <test-case name="UnitTests.ModelProviders.UserManagerEditModelProvider.UserEditModel_Loads_UserById_AndRoles" executed="True" result="Success" success="True" time="0.081" asserts="4" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="UserManagerListModelProvider" executed="True" result="Success" success="True" time="0.003" asserts="0">
+                <results>
+                  <test-case name="UnitTests.ModelProviders.UserManagerListModelProvider.List_Holds_All_Users" executed="True" result="Success" success="True" time="0.002" asserts="2" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="UserManagerUnAssignModelProvider" executed="True" result="Success" success="True" time="0.007" asserts="0">
+                <results>
+                  <test-case name="UnitTests.ModelProviders.UserManagerUnAssignModelProvider.RemoveRole_Updates_User_AndRemoves_Role" executed="True" result="Success" success="True" time="0.007" asserts="0" />
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+          <test-suite type="Namespace" name="Routes" executed="True" result="Success" success="True" time="0.267" asserts="0">
+            <results>
+              <test-suite type="TestFixture" name="DefaultRoutesRegistrar_Tests" executed="True" result="Success" success="True" time="0.138" asserts="0">
+                <results>
+                  <test-case name="UnitTests.Routes.DefaultRoutesRegistrar_Tests.MapsRoute_AccountLogOff" executed="True" result="Success" success="True" time="0.028" asserts="0" />
+                  <test-case name="UnitTests.Routes.DefaultRoutesRegistrar_Tests.MapsRoute_AccountLogon" executed="True" result="Success" success="True" time="0.003" asserts="0" />
+                  <test-case name="UnitTests.Routes.DefaultRoutesRegistrar_Tests.MapsRoute_HomeAbout" executed="True" result="Success" success="True" time="0.003" asserts="0" />
+                  <test-case name="UnitTests.Routes.DefaultRoutesRegistrar_Tests.MapsRoute_HomeIndex" executed="True" result="Success" success="True" time="0.003" asserts="0" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="IgnoredRoutesRegistrar_Tests" executed="True" result="Success" success="True" time="0.024" asserts="0">
+                <results>
+                  <test-case name="UnitTests.Routes.IgnoredRoutesRegistrar_Tests.IgnoresRoute_AssetsPath" executed="True" result="Success" success="True" time="0.008" asserts="0" />
+                  <test-case name="UnitTests.Routes.IgnoredRoutesRegistrar_Tests.IgnoresRoute_ForHttpWebHandlers" executed="True" result="Success" success="True" time="0.003" asserts="0" />
+                  <test-case name="UnitTests.Routes.IgnoredRoutesRegistrar_Tests.IgoresRoute_Favicon" executed="True" result="Success" success="True" time="0.003" asserts="0" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="RoleManagerRoutesRegistrar_Tests" executed="True" result="Success" success="True" time="0.004" asserts="0">
+                <results>
+                  <test-case name="UnitTests.Routes.RoleManagerRoutesRegistrar_Tests.MapsRoute_Roles" executed="True" result="Success" success="True" time="0.003" asserts="0" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="ScriptsRegistrar_Tests" executed="True" result="Success" success="True" time="0.098" asserts="0">
+                <results>
+                  <test-case name="UnitTests.Routes.ScriptsRegistrar_Tests.BeforeEach" executed="True" result="Success" success="True" time="0.084" asserts="0" />
+                  <test-case name="UnitTests.Routes.ScriptsRegistrar_Tests.MapRoute_Js" executed="True" result="Success" success="True" time="0.004" asserts="0" />
+                  <test-case name="UnitTests.Routes.ScriptsRegistrar_Tests.MapsRoute_Css" executed="True" result="Success" success="True" time="0.004" asserts="0" />
                 </results>
               </test-suite>
             </results>

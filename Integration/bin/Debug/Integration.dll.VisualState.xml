@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
-  <TopNode>[0-1009]C:\Users\mihailazar\documents\visual studio 2010\Projects\Experiments\AppHarbor\Booker\Integration\bin\Debug\Integration.dll</TopNode>
-  <SelectedNode>[0-1009]C:\Users\mihailazar\documents\visual studio 2010\Projects\Experiments\AppHarbor\Booker\Integration\bin\Debug\Integration.dll</SelectedNode>
+  <TopNode>[0-1009]C:\Users\mihailazar\Documents\Visual Studio 2010\Projects\Experiments\AppHarbor\BookerClean\Integration\bin\Debug\Integration.dll</TopNode>
+  <SelectedNode>[0-1009]C:\Users\mihailazar\Documents\Visual Studio 2010\Projects\Experiments\AppHarbor\BookerClean\Integration\bin\Debug\Integration.dll</SelectedNode>
   <ExcludeCategories>false</ExcludeCategories>
   <Nodes>
-    <Node UniqueName="[0-1009]C:\Users\mihailazar\documents\visual studio 2010\Projects\Experiments\AppHarbor\Booker\Integration\bin\Debug\Integration.dll" Expanded="true" />
+    <Node UniqueName="[0-1009]C:\Users\mihailazar\Documents\Visual Studio 2010\Projects\Experiments\AppHarbor\BookerClean\Integration\bin\Debug\Integration.dll" Expanded="true" />
     <Node UniqueName="[0-1011]Integration" Expanded="true" />
-    <Node UniqueName="[0-1002]Integration.When_Saving_A_Bookmark" Expanded="true" />
+    <Node UniqueName="[0-1005]Integration.When_Saving_A_Bookmark" Expanded="true" />
     <Node UniqueName="[0-1010]IntegrationTests" Expanded="true" />
-    <Node UniqueName="[0-1007]IntegrationTests.When_WeWantToPersist_A_Permission" Expanded="true" />
-    <Node UniqueName="[0-1004]IntegrationTests.When_WeWantToPersist_AnEmployee" Expanded="true" />
-    <Node UniqueName="[0-1000]IntegrationTests.When_WeWantToSave_A_Role" Expanded="true" />
+    <Node UniqueName="[0-1000]IntegrationTests.When_WeWantToPersist_A_Permission" Expanded="true" />
+    <Node UniqueName="[0-1002]IntegrationTests.When_WeWantToPersist_AnEmployee" Expanded="true" />
+    <Node UniqueName="[0-1007]IntegrationTests.When_WeWantToSave_A_Role" Expanded="true" />
   </Nodes>
 </VisualState>

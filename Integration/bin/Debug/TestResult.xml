@@ -1,35 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\mihailazar\documents\visual studio 2010\Projects\Experiments\AppHarbor\Booker\Integration\bin\Debug\Integration.dll" total="5" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2011-05-06" time="12:37:36">
-  <environment nunit-version="2.5.5.10112" clr-version="4.0.30319.225" os-version="Microsoft Windows NT 6.1.7600.0" platform="Win32NT" cwd="C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE" machine-name="EVOL075" user="mihailazar" user-domain="EVOL075" />
+<test-results name="C:\Users\mihailazar\Documents\Visual Studio 2010\Projects\Experiments\AppHarbor\BookerClean\Integration\bin\Debug\Integration.dll" total="5" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2011-06-06" time="10:31:38">
+  <environment nunit-version="2.5.5.10112" clr-version="4.0.30319.225" os-version="Microsoft Windows NT 6.1.7600.0" platform="Win32NT" cwd="C:\Windows\system32" machine-name="EVOL075" user="mihailazar" user-domain="EVOL075" />
   <culture-info current-culture="en-US" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="C:\Users\mihailazar\documents\visual studio 2010\Projects\Experiments\AppHarbor\Booker\Integration\bin\Debug\Integration.dll" executed="True" result="Success" success="True" time="9.285" asserts="0">
+  <test-suite type="Assembly" name="C:\Users\mihailazar\Documents\Visual Studio 2010\Projects\Experiments\AppHarbor\BookerClean\Integration\bin\Debug\Integration.dll" executed="True" result="Success" success="True" time="8.214" asserts="0">
     <results>
-      <test-suite type="Namespace" name="Integration" executed="True" result="Success" success="True" time="5.762" asserts="0">
+      <test-suite type="Namespace" name="Integration" executed="True" result="Success" success="True" time="5.010" asserts="0">
         <results>
-          <test-suite type="TestFixture" name="When_Saving_A_Bookmark" executed="True" result="Success" success="True" time="5.758" asserts="0">
+          <test-suite type="TestFixture" name="When_Saving_A_Bookmark" executed="True" result="Success" success="True" time="5.003" asserts="0">
             <results>
-              <test-case name="Integration.When_Saving_A_Bookmark.It_Should_Support_Creation_And_Deletion" executed="True" result="Success" success="True" time="0.711" asserts="3" />
+              <test-case name="Integration.When_Saving_A_Bookmark.It_Should_Support_Creation_And_Deletion" executed="True" result="Success" success="True" time="0.491" asserts="3" />
             </results>
           </test-suite>
         </results>
       </test-suite>
-      <test-suite type="Namespace" name="IntegrationTests" executed="True" result="Success" success="True" time="3.501" asserts="0">
+      <test-suite type="Namespace" name="IntegrationTests" executed="True" result="Success" success="True" time="3.195" asserts="0">
         <results>
-          <test-suite type="TestFixture" name="When_WeWantToPersist_A_Permission" executed="True" result="Success" success="True" time="0.544" asserts="0">
+          <test-suite type="TestFixture" name="When_WeWantToPersist_A_Permission" executed="True" result="Success" success="True" time="0.448" asserts="0">
             <results>
-              <test-case name="IntegrationTests.When_WeWantToPersist_A_Permission.It_ShouldBeAbleTo_Save_ThenLoad_ThenDelete_A_Function" executed="True" result="Success" success="True" time="0.255" asserts="4" />
+              <test-case name="IntegrationTests.When_WeWantToPersist_A_Permission.It_ShouldBeAbleTo_Save_ThenLoad_ThenDelete_A_Function" executed="True" result="Success" success="True" time="0.227" asserts="4" />
             </results>
           </test-suite>
-          <test-suite type="TestFixture" name="When_WeWantToPersist_AnEmployee" executed="True" result="Success" success="True" time="2.385" asserts="0">
+          <test-suite type="TestFixture" name="When_WeWantToPersist_AnEmployee" executed="True" result="Success" success="True" time="2.141" asserts="0">
             <results>
-              <test-case name="IntegrationTests.When_WeWantToPersist_AnEmployee.It_ShouldQueryFor_EmployeeByName" executed="True" result="Success" success="True" time="1.751" asserts="5" />
-              <test-case name="IntegrationTests.When_WeWantToPersist_AnEmployee.It_ShouldSuccessfullyPersist_AnEmployee" executed="True" result="Success" success="True" time="0.430" asserts="4" />
+              <test-case name="IntegrationTests.When_WeWantToPersist_AnEmployee.It_ShouldQueryFor_EmployeeByName" executed="True" result="Success" success="True" time="1.597" asserts="5" />
+              <test-case name="IntegrationTests.When_WeWantToPersist_AnEmployee.It_ShouldSuccessfullyPersist_AnEmployee" executed="True" result="Success" success="True" time="0.354" asserts="4" />
             </results>
           </test-suite>
-          <test-suite type="TestFixture" name="When_WeWantToSave_A_Role" executed="True" result="Success" success="True" time="0.563" asserts="0">
+          <test-suite type="TestFixture" name="When_WeWantToSave_A_Role" executed="True" result="Success" success="True" time="0.591" asserts="0">
             <results>
-              <test-case name="IntegrationTests.When_WeWantToSave_A_Role.It_ShouldBeAbleTo_Save_ThenLoad_ThenDelete_A_Role" executed="True" result="Success" success="True" time="0.366" asserts="7" />
+              <test-case name="IntegrationTests.When_WeWantToSave_A_Role.It_ShouldBeAbleTo_Save_ThenLoad_ThenDelete_A_Role" executed="True" result="Success" success="True" time="0.387" asserts="7" />
             </results>
           </test-suite>
         </results>

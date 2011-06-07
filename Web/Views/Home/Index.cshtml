@@ -23,7 +23,7 @@
 			}
 			@foreach (var bookmark in Model.Bookmarks)
    {
-	   var _class = (item % 2 == 0) ? "odd" : "even";
+       var _class = (item % 2 == 0) ? "odd" : "even";
 	   
 				<tr class="@_class">
 					<td>@(Html.ActionLink<HomeController>(c => c.EditBookmark(bookmark.Id), "Edit"))
@@ -31,8 +31,7 @@
 					<td>@bookmark.Url
 					</td>
 					<td>@bookmark.Notes
-					</td>
-				</tr> 
+					</td>				</tr> 
    }
 		</tbody>
 	</table>

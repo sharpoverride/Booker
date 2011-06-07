@@ -49,8 +49,10 @@ namespace Tests.Unit.Controllers
 		{
 
 			c.QueryBookmarks = A.Fake<IQueryService<Bookmark>>();
-
-			var call = A.CallTo(() => c.QueryBookmarks.Query());
+            // method: QueryBookmark
+            // 
+            
+            var call = A.CallTo(() => c.QueryBookmarks.Query());
 
 			call.Returns<IQueryable<Bookmark>>(
 				new Bookmark[]{
